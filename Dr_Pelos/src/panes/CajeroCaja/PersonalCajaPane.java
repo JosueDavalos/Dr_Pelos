@@ -31,9 +31,9 @@ public class PersonalCajaPane {
     
     private Pane cajaCenter(){
         //Opcion Agregar nuevo cliente
-        ImageView img_nuevo_usuario =  Metodos.getImagen("agregar_usuario",200,200);
+        ImageView img_nuevo_usuario =  Metodos.imagenAsignatura(100,100);
         Label LUser = new Label("Agregar Cliente"); LUser.setFont(Font.font("Arial", FontWeight.BOLD, 30));
-        HBox h_user = new HBox(LUser); h_user.setAlignment(Pos.CENTER);
+        HBox h_user = new HBox(img_nuevo_usuario, LUser); h_user.setAlignment(Pos.CENTER);
         /*vp.setOnMouseClicked( (event) -> {
             ProfeAdminPane profe_pane = new ProfeAdminPane();
             root.getChildren().clear();

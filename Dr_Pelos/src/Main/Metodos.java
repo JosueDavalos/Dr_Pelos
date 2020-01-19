@@ -15,10 +15,8 @@ import panes.Constantes;
  */
 public class Metodos {
     
-    
-    public static ImageView getImagen(String nombre, double largo, double ancho){
-        Image atras = new Image("agregar-usuario.png",largo,ancho,true,true);
-        ImageView img_atras = new ImageView(atras);
-        return img_atras;
-    }
+    public static ImageView imagenAsignatura(int largo, int ancho){
+        Image asignatura = new Image(Constantes.ruta+"agregar_usuario.png",largo,ancho,true,true);
+        return new ImageView(asignatura); 
+     }
 }
