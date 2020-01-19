@@ -9,6 +9,6 @@ package panes;
  *
  * @author JosueDavalos
  */
-public class Constantes {
+public class Constante {
     public static String ruta = "/imagenes/";
 }

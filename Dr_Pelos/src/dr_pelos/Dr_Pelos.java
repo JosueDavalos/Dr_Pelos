@@ -3,25 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main;
+package dr_pelos;
 
-import panes.LoginPane;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.io.File;
 import javafx.application.Application;
-import static javafx.application.Application.launch;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import panes.LoginPane;
 
 /**
  *
- * @author jeffer
+ * @author JosueDavalos
  */
-public class Main extends Application{
+public class Dr_Pelos extends Application {
     LoginPane pantalla = new LoginPane();
-   
+    
     @Override
     public void start(Stage primaryStage) {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -42,4 +41,5 @@ public class Main extends Application{
     public static void main(String[] args) {
         launch(args);
     }
+    
 }

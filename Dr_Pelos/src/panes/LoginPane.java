@@ -5,6 +5,7 @@
  */
 package panes;
 
+import dr_pelos.Metodos;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -23,14 +24,14 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
-import panes.CajeroCaja.PersonalCajaPane;
+import panes.personalCaja.PersonalCaja;
 
 /**
  *
  * @author JosueDavalos
  */
 public class LoginPane {
-    private BorderPane root;
+     private BorderPane root;
     private Label warningMessage = new Label("");
     private TextField user;
     private PasswordField password;
@@ -76,8 +77,7 @@ public class LoginPane {
         Label inicioSesionL = new Label("Inicio de Sesion");
         inicioSesionL.setFont(Font.font("Arial", FontWeight.BOLD, 40));
         inicioSesionL.setTextFill(Color.BLACK);
-        Image sesion = new Image(getClass().getResourceAsStream(Constantes.ruta+"sesion.png"),200,200,true,true);
-        ImageView img_sesion = new ImageView(sesion);
+        ImageView img_sesion = Metodos.getImagen("sesion", 200, 200);
         VBox vb = new VBox(inicioSesionL,img_sesion);
         vb.setAlignment(Pos.CENTER);
         vb.setSpacing(20);
@@ -88,7 +88,7 @@ public class LoginPane {
             String usuario = user.getText();
             String contra = password.getText();
             if(!usuario.equals("")){
-                PersonalCajaPane personalCajaPane = new PersonalCajaPane();
+                PersonalCaja personalCajaPane = new PersonalCaja();
                 root.getChildren().clear();
                 root.setCenter(personalCajaPane.getRoot());
             /*}else if(Metodos.esProfesor(usuario, contra,warningMessage)){
