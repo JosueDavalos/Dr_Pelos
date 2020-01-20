@@ -16,8 +16,8 @@ import javafx.scene.layout.Pane;
 public class Ventana {
     private BorderPane root;
 
-    public Ventana(BorderPane border) {
-        this.root = border;
+    public Ventana() {
+        this.root = new BorderPane();
     }
 
     public BorderPane getRoot() {

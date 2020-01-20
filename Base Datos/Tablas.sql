@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS dr_pelos.Cliente (
   genero char(1)  NOT NULL,
   correo varchar(50) not null,
   FechaNacimiento DATE NOT NULL,
-  direccion VARCHAR(50) NOT NULL,
+  direccion VARCHAR(100) NOT NULL,
   telefono VARCHAR(15) NOT NULL,
   PRIMARY KEY (ID))
 ENGINE = InnoDB;

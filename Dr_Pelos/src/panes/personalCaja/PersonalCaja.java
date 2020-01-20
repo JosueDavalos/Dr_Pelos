@@ -14,6 +14,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import panes.CotizarPane;
+import panes.VentaPane;
 import panes.Ventana;
 
 
@@ -24,7 +25,7 @@ import panes.Ventana;
 public class PersonalCaja extends Ventana{
     
     public PersonalCaja(){ 
-        super(new BorderPane());
+        super();
         super.setCenter(cajaCenter()); 
         super.setTop();
     }
@@ -44,6 +45,10 @@ public class PersonalCaja extends Ventana{
         
         cotizar.setOnMouseClicked( (event) -> {
             super.setCenter( new CotizarPane().getRoot() ) ;
+        });
+        
+        venta.setOnMouseClicked( (event) -> {
+            super.setCenter( new VentaPane().getRoot() ) ;
         });
         
         GridPane gp = new GridPane();

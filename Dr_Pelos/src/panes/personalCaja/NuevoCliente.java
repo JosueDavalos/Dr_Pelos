@@ -31,7 +31,7 @@ public class NuevoCliente extends Ventana{
     private TextField Tdireccion;
     
     public NuevoCliente(){
-        super(new BorderPane());
+        super();
         
         Tcedula = new TextField();
         Tnombre = new TextField();
