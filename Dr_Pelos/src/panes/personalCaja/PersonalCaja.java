@@ -13,6 +13,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import panes.CotizarPane;
 import panes.Ventana;
 
 
@@ -25,6 +26,7 @@ public class PersonalCaja extends Ventana{
     public PersonalCaja(){ 
         super(new BorderPane());
         super.setCenter(cajaCenter()); 
+        super.setTop();
     }
     
     private Pane cajaCenter(){
@@ -36,12 +38,13 @@ public class PersonalCaja extends Ventana{
         Pane consultar_entrega = Metodos.crearOpcion("Consultar Entrega",size);
         Pane traslado_mascota = Metodos.crearOpcion("Traslado de mascota",size);
         
-        
         agregar_cliente.setOnMouseClicked( (event) -> {
             super.setCenter( new NuevoCliente().getRoot() ) ;
         });
         
-        
+        cotizar.setOnMouseClicked( (event) -> {
+            super.setCenter( new CotizarPane().getRoot() ) ;
+        });
         
         GridPane gp = new GridPane();
         gp.addColumn(0, agregar_cliente, cotizar, venta);

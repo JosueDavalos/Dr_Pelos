@@ -18,7 +18,6 @@ public class Ventana {
 
     public Ventana(BorderPane border) {
         this.root = border;
-        root.setTop(Metodos.topPane());
     }
 
     public BorderPane getRoot() {
@@ -34,8 +33,8 @@ public class Ventana {
         root.setCenter(pane);
     }
     
-    public void setTop(Pane pane){
-        root.setTop(pane);
+    public void setTop(){
+         this.root.setTop(Metodos.topPane());
     } 
     
 }

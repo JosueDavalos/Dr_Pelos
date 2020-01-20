@@ -16,8 +16,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import panes.Ventana;
 
 /**
@@ -34,6 +32,7 @@ public class NuevoCliente extends Ventana{
     
     public NuevoCliente(){
         super(new BorderPane());
+        
         Tcedula = new TextField();
         Tnombre = new TextField();
         Cgenero = Metodos.getComboGenero();
@@ -42,6 +41,7 @@ public class NuevoCliente extends Ventana{
         Tdireccion = new TextField();
         
         super.setCenter( nuevoClienteCenter());
+        super.setTop();
     }
     
     private Pane nuevoClienteCenter(){
