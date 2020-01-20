@@ -7,26 +7,28 @@ package panes.personalCaja;
 
 import dr_pelos.Metodos;
 import javafx.geometry.Pos;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import panes.Ventana;
 
 
 /**
  *
  * @author JosueDavalos
  */
-public class PersonalCaja {
-    private BorderPane root;
+public class PersonalCaja extends Ventana{
     
-    public PersonalCaja(){
-        root = new BorderPane();
-        root.setCenter(cajaCenter()); 
+    public PersonalCaja(){ 
+        super(new BorderPane());
+        super.setCenter(cajaCenter()); 
     }
     
     private Pane cajaCenter(){
-        int size = 100;
+        int size = 110;
         
         Pane agregar_cliente = Metodos.crearOpcion("Agregar Cliente",size);
         Pane cotizar = Metodos.crearOpcion("Cotizar",size);
@@ -34,19 +36,26 @@ public class PersonalCaja {
         Pane consultar_entrega = Metodos.crearOpcion("Consultar Entrega",size);
         Pane traslado_mascota = Metodos.crearOpcion("Traslado de mascota",size);
         
-        VBox vb = new VBox(agregar_cliente, cotizar, venta, consultar_entrega, traslado_mascota);
         
-        vb.setSpacing(20);
-        vb.setAlignment(Pos.BOTTOM_LEFT);
-        //Label opcion = Metodos.getLabel("Escoja una Opcion:"); opcion.setTranslateY(100);
-        //HBox hb = new HBox(opcion, vb); vb.setAlignment(Pos.CENTER_LEFT); vb.setSpacing(50);
+        agregar_cliente.setOnMouseClicked( (event) -> {
+            super.setCenter( new NuevoCliente().getRoot() ) ;
+        });
+        
+        
+        
+        GridPane gp = new GridPane();
+        gp.addColumn(0, agregar_cliente, cotizar, venta);
+        gp.addColumn(1, consultar_entrega, traslado_mascota);
+        gp.setHgap(40);
+        gp.setVgap(40);
+        gp.setAlignment(Pos.CENTER);
+        
+        Label opcion = Metodos.getLabel("Escoja una Opcion:", 30); opcion.setTranslateX(50);
+        VBox vb = new VBox(opcion, gp); vb.setAlignment(Pos.CENTER_LEFT); vb.setSpacing(50);
         return vb;
         
     }
     
-    public Pane getRoot(){
-        return root;
-    }
 }
 
 
