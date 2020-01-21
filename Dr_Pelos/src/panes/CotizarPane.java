@@ -5,7 +5,8 @@
  */
 package panes;
 
-import dr_pelos.Metodos;
+import Util.ComponentePane;
+import Util.Metodos;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
@@ -21,7 +22,7 @@ public class CotizarPane extends VentanaBuscar{
     }
     
     private Pane cotizarCenter(){
-        VBox vb = new VBox(super.panelFiltos(25), Metodos.crearTable());
+        VBox vb = new VBox(super.panelFiltos(25), ComponentePane.crearTable());
         vb.setSpacing(30);
         return vb;
     }

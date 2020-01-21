@@ -5,7 +5,8 @@
  */
 package panes;
 
-import dr_pelos.Metodos;
+import Util.ComponentePane;
+import Util.Metodos;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -28,7 +29,7 @@ public class VentaPane extends VentanaBuscar{
     }
     
     private Pane ventaCenter(){
-        VBox vb = new VBox(super.panelFiltos(15), Metodos.crearTable());
+        VBox vb = new VBox(super.panelFiltos(15), ComponentePane.crearTable());
         vb.setSpacing(30);
         return vb;
     }

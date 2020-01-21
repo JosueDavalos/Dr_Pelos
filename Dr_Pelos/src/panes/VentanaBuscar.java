@@ -5,7 +5,8 @@
  */
 package panes;
 
-import dr_pelos.Metodos;
+import Util.ComponentePane;
+import Util.Metodos;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -29,14 +30,14 @@ public class VentanaBuscar extends Ventana{
         Tnombre = new TextField();
         Tcategoria = new TextField();
         Tdescripcion = new TextField();
-        buscar = Metodos.crearBoton("Buscar");
+        buscar = ComponentePane.crearBoton("Buscar");
         
     }
     
     public Pane panelFiltos(int size){
-        Label Lnombre = Metodos.getLabel("Nombre", size);
-        Label Lcategoria = Metodos.getLabel("Categoria", size);
-        Label Ldescripcion = Metodos.getLabel("Descripcion", size);
+        Label Lnombre = ComponentePane.getLabel("Nombre", size);
+        Label Lcategoria = ComponentePane.getLabel("Categoria", size);
+        Label Ldescripcion = ComponentePane.getLabel("Descripcion", size);
         
         GridPane gp = new GridPane();
         gp.addRow(0, Lnombre, Tnombre, Lcategoria, Tcategoria, buscar);

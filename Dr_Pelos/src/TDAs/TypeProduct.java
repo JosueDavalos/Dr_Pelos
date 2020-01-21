@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Tablas;
-
-import usuarios.Cliente;
-import javafx.scene.control.TableView;
+package TDAs;
 
 /**
  *
  * @author jeffer
  */
-public class Tcliente {
-    private TableView<Cliente> table;
+public enum TypeProduct {
+    JUGUETE,
+    ROPA,
+    MEDICINA,
+    ALIMENTO
 }

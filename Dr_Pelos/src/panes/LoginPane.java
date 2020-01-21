@@ -5,7 +5,8 @@
  */
 package panes;
 
-import dr_pelos.Metodos;
+import Util.ComponentePane;
+import Util.Metodos;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -76,7 +77,7 @@ public class LoginPane {
         Label inicioSesionL = new Label("Inicio de Sesion");
         inicioSesionL.setFont(Font.font("Arial", FontWeight.BOLD, 40));
         inicioSesionL.setTextFill(Color.BLACK);
-        ImageView img_sesion = Metodos.getImagen("sesion", 200, 200);
+        ImageView img_sesion = ComponentePane.getImagen("sesion", 200, 200);
         VBox vb = new VBox(inicioSesionL,img_sesion);
         vb.setAlignment(Pos.CENTER);
         vb.setSpacing(20);

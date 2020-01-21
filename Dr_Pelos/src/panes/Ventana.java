@@ -5,7 +5,8 @@
  */
 package panes;
 
-import dr_pelos.Metodos;
+import Util.ComponentePane;
+import Util.Metodos;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 
@@ -34,7 +35,7 @@ public class Ventana {
     }
     
     public void setTop(){
-         this.root.setTop(Metodos.topPane());
+         this.root.setTop(ComponentePane.topPane());
     } 
     
 }

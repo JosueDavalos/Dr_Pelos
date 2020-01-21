@@ -5,7 +5,8 @@
  */
 package panes.personalCaja;
 
-import dr_pelos.Metodos;
+import Util.ComponentePane;
+import Util.Metodos;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -35,7 +36,7 @@ public class NuevoCliente extends Ventana{
         
         Tcedula = new TextField();
         Tnombre = new TextField();
-        Cgenero = Metodos.getComboGenero();
+        Cgenero = ComponentePane.getComboGenero();
         Tapellido = new TextField();
         Ttelf = new TextField();
         Tdireccion = new TextField();
@@ -46,12 +47,12 @@ public class NuevoCliente extends Ventana{
     
     private Pane nuevoClienteCenter(){
         int size = 25;
-        Label Lcedula = Metodos.getLabel("Cedula", size); 
-        Label Lnombre = Metodos.getLabel("Nombres", size); 
-        Label Lapellido = Metodos.getLabel("Apellidos", size); 
-        Label Lgenero = Metodos.getLabel("Genero", size); 
-        Label Ltelf = Metodos.getLabel("Telefono", size); 
-        Label Ldireccion = Metodos.getLabel("Direccion", size);
+        Label Lcedula = ComponentePane.getLabel("Cedula", size); 
+        Label Lnombre = ComponentePane.getLabel("Nombres", size); 
+        Label Lapellido = ComponentePane.getLabel("Apellidos", size); 
+        Label Lgenero = ComponentePane.getLabel("Genero", size); 
+        Label Ltelf = ComponentePane.getLabel("Telefono", size); 
+        Label Ldireccion = ComponentePane.getLabel("Direccion", size);
         
         GridPane gp = new GridPane();
         gp.addColumn(0,Lcedula, Lnombre, Lapellido, Lgenero, Ltelf, Ldireccion);
@@ -60,12 +61,12 @@ public class NuevoCliente extends Ventana{
         gp.setVgap(20);
         gp.setAlignment(Pos.CENTER);
         
-        Button guardar = Metodos.crearBoton("Guardar");
-        Button cancelar = Metodos.crearBoton("Cancelar");
+        Button guardar = ComponentePane.crearBoton("Guardar");
+        Button cancelar = ComponentePane.crearBoton("Cancelar");
         HBox botones = new HBox(guardar, cancelar);
         botones.setAlignment(Pos.CENTER); botones.setSpacing(30);
         
-        VBox vb = new VBox(Metodos.getLabel("Nuevo Cliente", 30),gp,botones);
+        VBox vb = new VBox(ComponentePane.getLabel("Nuevo Cliente", 30),gp,botones);
         return vb;
     }
     

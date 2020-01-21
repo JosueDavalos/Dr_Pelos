@@ -5,7 +5,8 @@
  */
 package panes.personalCaja;
 
-import dr_pelos.Metodos;
+import Util.ComponentePane;
+import Util.Metodos;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
@@ -33,11 +34,11 @@ public class PersonalCaja extends Ventana{
     private Pane cajaCenter(){
         int size = 110;
         
-        Pane agregar_cliente = Metodos.crearOpcion("Agregar Cliente",size);
-        Pane cotizar = Metodos.crearOpcion("Cotizar",size);
-        Pane venta = Metodos.crearOpcion("Venta Producto o Servicio",size);
-        Pane consultar_entrega = Metodos.crearOpcion("Consultar Entrega",size);
-        Pane traslado_mascota = Metodos.crearOpcion("Traslado de mascota",size);
+        Pane agregar_cliente = ComponentePane.crearOpcion("Agregar Cliente",size);
+        Pane cotizar = ComponentePane.crearOpcion("Cotizar",size);
+        Pane venta = ComponentePane.crearOpcion("Venta Producto o Servicio",size);
+        Pane consultar_entrega = ComponentePane.crearOpcion("Consultar Entrega",size);
+        Pane traslado_mascota = ComponentePane.crearOpcion("Traslado de mascota",size);
         
         agregar_cliente.setOnMouseClicked( (event) -> {
             super.setCenter( new NuevoCliente().getRoot() ) ;
@@ -58,7 +59,7 @@ public class PersonalCaja extends Ventana{
         gp.setVgap(40);
         gp.setAlignment(Pos.CENTER);
         
-        Label opcion = Metodos.getLabel("Escoja una Opcion:", 30); opcion.setTranslateX(50);
+        Label opcion = ComponentePane.getLabel("Escoja una Opcion:", 30); opcion.setTranslateX(50);
         VBox vb = new VBox(opcion, gp); vb.setAlignment(Pos.CENTER_LEFT); vb.setSpacing(50);
         return vb;
         
