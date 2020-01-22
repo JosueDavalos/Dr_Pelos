@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Ventanas;
+package Ventanas.Cajero;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -12,9 +12,9 @@ import javafx.fxml.Initializable;
 /**
  * FXML Controller class
  *
- * @author JosueDavalos
+ * @author jeffer
  */
-public class VcajeroController implements Initializable {
+public class VnuevoClienteController implements Initializable {
 
     /**
      * Initializes the controller class.
