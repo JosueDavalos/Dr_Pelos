@@ -29,10 +29,7 @@ import panes.Ventana;
  * @author jeffer
  */
 public class ComponentePane {
-        public static ImageView getImagen(String nombre, int largo, int ancho){
-        Image imagen = new Image(Constante.ruta+nombre+".png",largo,ancho,true,true);
-        return new ImageView(imagen);
-    }
+    
     
     public static Label getLabel(String string, int size){
         Label label = new Label(string); 
@@ -41,7 +38,7 @@ public class ComponentePane {
     }
     
     public static Pane crearOpcion(String opcion, int size){
-        ImageView img_user = getImagen(opcion, size, size);
+        ImageView img_user = Imagenes.getImagen(opcion, size, size);
         Label LUser = getLabel(opcion, 30);
         LUser.setTranslateY(30);
         HBox hb = new HBox(img_user,LUser);
@@ -49,12 +46,21 @@ public class ComponentePane {
         return hb;
     }
     
-    public static Pane topPane(){
-        HBox hb = new HBox(getLabel("Salir", 20), getImagen("logout",35,35));
+    public static Pane cerrarSesion(){
+        HBox hb = new HBox(getLabel("Salir", 20), Imagenes.getImagen("logout",35,35));
         hb.setTranslateY(25);
         hb.setTranslateX(-25);
         hb.setSpacing(20);
-        hb.setAlignment(Pos.TOP_RIGHT);
+        hb.setAlignment(Pos.CENTER_RIGHT);
+        return hb;
+    }
+    
+    public static Pane topPane(){
+        HBox hb = new HBox(getLabel("Salir", 20), Imagenes.getImagen("logout",35,35));
+        hb.setTranslateY(25);
+        hb.setTranslateX(-25);
+        hb.setSpacing(20);
+        hb.setAlignment(Pos.CENTER_RIGHT);
         return hb;
     }
     

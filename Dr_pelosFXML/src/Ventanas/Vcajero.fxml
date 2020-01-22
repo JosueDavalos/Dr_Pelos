@@ -11,20 +11,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ventanas.Cajero.VcajeroController">
    <top>
-      <HBox alignment="TOP_CENTER" prefHeight="39.0" prefWidth="1000.0" spacing="250.0" translateY="15.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="1000.0" spacing="325.0" translateY="15.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" translateX="-60.0">
-               <image>
-                  <Image url="@../imagenes/atras.png" />
-               </image>
-            </ImageView>
-            <Label text="Nombr de Usuario" textAlignment="CENTER" translateY="5.0">
+            <Label text="Nombre de Usuario" textAlignment="CENTER" translateY="5.0">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font></Label>
-            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" translateX="60.0">
+            <ImageView fx:id="cerrar_sesion" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#ActionCerrarSesion" pickOnBounds="true" preserveRatio="true" translateX="-20.0">
                <image>
                   <Image url="@../imagenes/logout.png" />
                </image>
@@ -51,7 +46,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                  <HBox fx:id="agregarCliente" alignment="CENTER_LEFT" onMouseClicked="#ActionIngresarCliente" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -65,7 +60,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="30.0" GridPane.columnIndex="1">
+                  <HBox fx:id="consultarEntrega" alignment="CENTER_LEFT" onMouseClicked="#AccionConsultar" prefHeight="100.0" prefWidth="200.0" spacing="30.0" GridPane.columnIndex="1">
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -79,7 +74,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="30.0" GridPane.rowIndex="1">
+                  <HBox fx:id="cotizar" alignment="CENTER_LEFT" onMouseClicked="#AccionCotizar" prefHeight="100.0" prefWidth="200.0" spacing="30.0" GridPane.rowIndex="1">
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -93,7 +88,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0" spacing="30.0" GridPane.rowIndex="2">
+                  <HBox fx:id="Venta" alignment="CENTER" onMouseClicked="#AccionVenta" prefHeight="100.0" prefWidth="400.0" spacing="30.0" GridPane.rowIndex="2">
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -107,7 +102,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="30.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <HBox fx:id="traslado" alignment="CENTER_LEFT" onMouseClicked="#AccionTrasladoMascota" prefHeight="100.0" prefWidth="200.0" spacing="30.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                            <image>

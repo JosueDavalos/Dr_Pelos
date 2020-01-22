@@ -35,7 +35,7 @@ public class Ventana {
     }
     
     public void setTop(){
-         this.root.setTop(ComponentePane.topPane());
+         this.root.setTop(ComponentePane.cerrarSesion());
     } 
     
 }

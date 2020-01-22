@@ -5,31 +5,46 @@
  */
 package dr_pelosfxml;
 
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import static util.Ventana.cambiarVentana;
 
 /**
  *
  * @author JosueDavalos
  */
 public class LoginController implements Initializable {
-    
     @FXML
-    private Label label;
-    
+    private Button botonIngresar;
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
+    private Button botonSalir;
+    @FXML
+    private TextField user;
+    @FXML
+    private PasswordField password;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+    
+    @FXML
+    private void AccionIngresar(MouseEvent event) throws IOException {
+       cambiarVentana("/Ventanas/Vcajero.fxml",event, this);
+    }
+
+    @FXML
+    private void AccionSalir(MouseEvent event) {
+        System.exit(0);
+    }
+       
     
 }
