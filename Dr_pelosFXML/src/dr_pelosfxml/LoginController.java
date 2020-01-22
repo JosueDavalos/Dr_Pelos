@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dr_pelosxml;
+package dr_pelosfxml;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,9 +14,9 @@ import javafx.scene.control.Label;
 
 /**
  *
- * @author jeffer
+ * @author JosueDavalos
  */
-public class FXMLDocumentController implements Initializable {
+public class LoginController implements Initializable {
     
     @FXML
     private Label label;
