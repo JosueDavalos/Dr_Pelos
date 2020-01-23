@@ -7,7 +7,9 @@ package Ventanas;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.image.ImageView;
 
 /**
  * FXML Controller class
@@ -15,6 +17,11 @@ import javafx.fxml.Initializable;
  * @author jeffer
  */
 public class VconsultarEntregaController implements Initializable {
+
+    @FXML
+    private ImageView cerrar_sesion1;
+    @FXML
+    private ImageView cerrar_sesion;
 
     /**
      * Initializes the controller class.

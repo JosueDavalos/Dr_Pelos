@@ -18,7 +18,7 @@
     <top>
       <HBox alignment="TOP_CENTER" prefHeight="39.0" prefWidth="1000.0" spacing="250.0" translateY="15.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" translateX="-60.0">
+            <ImageView fx:id="botonAtras" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#AccionAtras" pickOnBounds="true" preserveRatio="true" translateX="-60.0">
                <image>
                   <Image url="@../imagenes/atras.png" />
                </image>

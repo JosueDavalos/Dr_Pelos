@@ -5,29 +5,35 @@
  */
 package Ventanas;
 
-import dr_pelosfxml.LoginController;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
-import javafx.stage.Stage;
+import static util.Ventana.cambiarVentana;
 
 /**
  * FXML Controller class
  *
- * @author JosueDavalos
+ * @author jeffer
  */
 public class VcajeroController implements Initializable {
 
+    @FXML
+    private ImageView cerrar_sesion;
+    @FXML
+    private HBox agregarCliente;
+    @FXML
+    private HBox consultarEntrega;
+    @FXML
+    private HBox cotizar;
+    @FXML
+    private HBox Venta;
+    @FXML
+    private HBox traslado;
 
     /**
      * Initializes the controller class.
@@ -36,38 +42,31 @@ public class VcajeroController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
-    /*public void ActionIngresarCliente(ActionEvent event) throws IOException {
-        System.out.println("Hola bb2");
-        
-        Parent v_agregar_cliente = (new VnuevoClienteController()).getEscenario();
-        Scene scene_agregar_cliente = new Scene(v_agregar_cliente);
-        Stage ventana = (Stage)((Node) event.getSource()).getScene().getWindow();
-        ventana.setScene(scene_agregar_cliente);
-        ventana.show();
-    }*/
-    
-  
-    
-    public Parent getEscenario() throws IOException{
-        return FXMLLoader.load(getClass().getResource("Vcajero.fxml"));
-    }
 
     @FXML
-    private void ActionCerrarSesion(MouseEvent event) {
-        System.out.println("cerrar session");
+    private void ActionCerrarSesion(MouseEvent event) throws IOException {
+        cambiarVentana("/Ventanas/Login.fxml",event, this);
     }
 
     @FXML
     private void ActionIngresarCliente(MouseEvent event) throws IOException {
-       FXMLLoader loader = new FXMLLoader(getClass().getResource("VnuevoCliente.fxml"));
-       Parent root = loader.load();
-       VnuevoClienteController control = loader.getController();
-       Scene nuevo = new Scene(root);
-       
-       Stage ventana = (Stage)((Node) event.getSource()).getScene().getWindow();
-       ventana.setScene(nuevo);
-       ventana.show();
-       
+        cambiarVentana("/Ventanas/VnuevoCliente.fxml",event, this);
     }
+
+    @FXML
+    private void AccionConsultar(MouseEvent event) {
+    }
+
+    @FXML
+    private void AccionCotizar(MouseEvent event) {
+    }
+
+    @FXML
+    private void AccionVenta(MouseEvent event) {
+    }
+
+    @FXML
+    private void AccionTrasladoMascota(MouseEvent event) {
+    }
+    
 }

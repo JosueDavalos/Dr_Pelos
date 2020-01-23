@@ -8,9 +8,13 @@ package Ventanas;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import static util.Ventana.cambiarVentana;
 
 /**
  * FXML Controller class
@@ -18,6 +22,9 @@ import javafx.scene.Parent;
  * @author jeffer
  */
 public class VnuevoClienteController implements Initializable {
+
+    @FXML
+    private ImageView botonAtras;
 
     public VnuevoClienteController() {
     }
@@ -30,8 +37,10 @@ public class VnuevoClienteController implements Initializable {
         // TODO
     }    
     
-    public Parent getEscenario() throws IOException{
-        return FXMLLoader.load(getClass().getResource("VnuevoCiente.fxml"));
+
+    @FXML
+    private void AccionAtras(MouseEvent event) throws IOException{
+        cambiarVentana("/Ventanas/Vcajero.fxml",event, this);
     }
     
 }
