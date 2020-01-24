@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ventanas.Cajero.VcajeroController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ventanas.controladores.VcajeroController">
    <top>
       <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="1000.0" spacing="325.0" translateY="15.0" BorderPane.alignment="CENTER">
          <children>
@@ -19,7 +19,7 @@
                <font>
                   <Font name="System Bold" size="25.0" />
                </font></Label>
-            <ImageView fx:id="cerrar_sesion" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#ActionCerrarSesion" pickOnBounds="true" preserveRatio="true" translateX="-20.0">
+            <ImageView fx:id="cerrar_sesion" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#ActionCerrarSesson" pickOnBounds="true" preserveRatio="true" translateX="-20.0">
                <image>
                   <Image url="@../imagenes/logout.png" />
                </image>

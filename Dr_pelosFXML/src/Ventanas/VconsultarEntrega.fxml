@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,11 +15,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Ventanas.VconsultarEntregaController">
+<BorderPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ventanas.controladores.VconsultarEntregaController">
     <top>
       <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="1000.0" spacing="325.0" translateY="15.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="cerrar_sesion1" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="boton_atras" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#action_Atras" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagenes/atras.png" />
                </image>
@@ -26,7 +28,7 @@
                <font>
                   <Font name="System Bold" size="25.0" />
                </font></Label>
-            <ImageView fx:id="cerrar_sesion" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" translateX="-20.0">
+            <ImageView fx:id="cerrar_sesion" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#action_cerrar_session" pickOnBounds="true" preserveRatio="true" translateX="-20.0">
                <image>
                   <Image url="@../imagenes/logout.png" />
                </image>
@@ -35,15 +37,15 @@
       </HBox>
     </top>
    <center>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="40.0" BorderPane.alignment="CENTER">
          <children>
-            <GridPane alignment="CENTER">
+            <GridPane alignment="CENTER" maxWidth="600.0" minWidth="657.0" prefHeight="90.0" prefWidth="657.0">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="80.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.33334350585938" minWidth="10.0" prefWidth="140.33334350585938" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="137.33331298828125" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.66668701171875" minWidth="10.0" prefWidth="129.3333740234375" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="307.33331298828125" minWidth="10.0" prefWidth="153.66668701171875" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.33331298828125" minWidth="10.0" prefWidth="97.33331298828125" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -62,20 +64,31 @@
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Label text="Categoria:" GridPane.columnIndex="2">
+                  <Label alignment="CENTER_RIGHT" text="Categoria:" translateX="20.0" GridPane.columnIndex="2">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
                   <TextField alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField alignment="CENTER" GridPane.columnIndex="3" />
-                  <Button mnemonicParsing="false" style="-fx-background-color: #000000;" text="Buscar" textFill="#f5f5f5" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                  <Button fx:id="boton_buscar" mnemonicParsing="false" onMouseClicked="#accion_buscar" style="-fx-background-color: #000000;" text="Buscar" textFill="#f5f5f5" GridPane.columnIndex="4" GridPane.rowIndex="2">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Button>
                </children>
             </GridPane>
+            <TableView prefHeight="323.0" prefWidth="1000.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Codigo" />
+                <TableColumn prefWidth="75.0" text="Paquete" />
+                  <TableColumn prefWidth="75.0" text="Categoria" />
+                  <TableColumn prefWidth="211.33331298828125" text="Descripcion" />
+                  <TableColumn prefWidth="128.66668701171875" text="Cliente" />
+                  <TableColumn minWidth="0.0" prefWidth="301.33331298828125" text="Direccion de entrega" />
+                  <TableColumn prefWidth="131.0" text="Estado" />
+              </columns>
+            </TableView>
          </children>
       </VBox>
    </center>

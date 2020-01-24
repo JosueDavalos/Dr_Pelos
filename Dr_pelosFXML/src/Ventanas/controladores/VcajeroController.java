@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Ventanas;
+package Ventanas.controladores;
 
 import java.io.IOException;
 import java.net.URL;
@@ -23,8 +23,6 @@ import static util.Ventana.cambiarVentana;
 public class VcajeroController implements Initializable {
 
     @FXML
-    private ImageView cerrar_sesion;
-    @FXML
     private HBox agregarCliente;
     @FXML
     private HBox consultarEntrega;
@@ -34,6 +32,8 @@ public class VcajeroController implements Initializable {
     private HBox Venta;
     @FXML
     private HBox traslado;
+    @FXML
+    private ImageView cerrar_sesion;
 
     /**
      * Initializes the controller class.
@@ -43,10 +43,7 @@ public class VcajeroController implements Initializable {
         // TODO
     }    
 
-    @FXML
-    private void ActionCerrarSesion(MouseEvent event) throws IOException {
-        cambiarVentana("/Ventanas/Login.fxml",event, this);
-    }
+    
 
     @FXML
     private void ActionIngresarCliente(MouseEvent event) throws IOException {
@@ -54,7 +51,8 @@ public class VcajeroController implements Initializable {
     }
 
     @FXML
-    private void AccionConsultar(MouseEvent event) {
+    private void AccionConsultar(MouseEvent event) throws IOException {
+        cambiarVentana("/Ventanas/VconsultarEntrega.fxml",event, this);
     }
 
     @FXML
@@ -62,11 +60,18 @@ public class VcajeroController implements Initializable {
     }
 
     @FXML
-    private void AccionVenta(MouseEvent event) {
+    private void AccionVenta(MouseEvent event) throws IOException {
+        cambiarVentana("/Ventanas/V_venta.fxml",event, this);
     }
 
     @FXML
     private void AccionTrasladoMascota(MouseEvent event) {
     }
-    
+
+    @FXML
+    private void ActionCerrarSesson(MouseEvent event) throws IOException {
+        cambiarVentana("/dr_pelosfxml/Login.fxml",event, this);
+    }
+
+  
 }

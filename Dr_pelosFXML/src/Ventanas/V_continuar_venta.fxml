@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ventanas.controladores.V_continuar_ventaController">
+    <top>
+      <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="1000.0" spacing="325.0" translateY="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="boton_atras" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#action_Atras" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/atras.png" />
+               </image>
+            </ImageView>
+            <Label text="Confirmar Compra" textAlignment="CENTER" translateY="5.0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Label>
+            <ImageView fx:id="cerrar_sesion" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#action_cerrar_session" pickOnBounds="true" preserveRatio="true" translateX="-20.0">
+               <image>
+                  <Image url="@../imagenes/logout.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+    </top>
+   <center>
+      <VBox alignment="CENTER" maxHeight="500.0" minHeight="400.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <GridPane alignment="CENTER" maxWidth="600.0" minWidth="600.0" prefHeight="38.0" prefWidth="600.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.33334350585938" minWidth="10.0" prefWidth="122.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="155.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.66668701171875" minWidth="10.0" prefWidth="146.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="307.33331298828125" minWidth="10.0" prefWidth="136.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Cliente:">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" text="Forma Pago" translateX="20.0" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                  <ComboBox prefWidth="150.0" GridPane.columnIndex="1" />
+                  <ComboBox prefWidth="150.0" GridPane.columnIndex="3" />
+                     </children>
+                  </GridPane>
+            <Label text="Productos/Servicios:" textAlignment="CENTER" translateX="-180.0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <TableView maxWidth="600.0" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn prefWidth="393.33331298828125" text="Producto/Servicio" />
+                <TableColumn minWidth="0.0" prefWidth="71.0" text="Unidad" />
+                  <TableColumn minWidth="0.0" prefWidth="96.0" text="Total" />
+                  <TableColumn minWidth="0.0" prefWidth="38.0" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="1000.0" spacing="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Valor Total: $55.55 ">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" style="-fx-background-color: #000000;" text="Confirmar" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

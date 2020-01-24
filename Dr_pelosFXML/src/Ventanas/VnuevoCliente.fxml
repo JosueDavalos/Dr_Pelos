@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ventanas.VnuevoClienteController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ventanas.controladores.VnuevoClienteController">
     <top>
       <HBox alignment="TOP_CENTER" prefHeight="39.0" prefWidth="1000.0" spacing="250.0" translateY="15.0" BorderPane.alignment="CENTER">
          <children>
@@ -27,7 +27,7 @@
                <font>
                   <Font name="System Bold" size="25.0" />
                </font></Label>
-            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" translateX="60.0">
+            <ImageView fx:id="cerrar_sesion" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#ActionCerrarSesion" pickOnBounds="true" preserveRatio="true" translateX="60.0">
                <image>
                   <Image url="@../imagenes/logout.png" />
                </image>
@@ -106,21 +106,21 @@
                   <TextField prefHeight="32.0" prefWidth="175.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                   <TextField prefHeight="32.0" prefWidth="175.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                   <TextField prefHeight="32.0" prefWidth="175.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                  <ComboBox prefHeight="32.0" prefWidth="187.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="combo_genero" prefHeight="32.0" prefWidth="187.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                </children>
             </GridPane>
          </children>
       </VBox>
    </center>
    <bottom>
-      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 40;" translateY="-30.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 40;" translateY="-30.0" BorderPane.alignment="CENTER">
          <children>
             <Button mnemonicParsing="false" style="-fx-background-color: #000000;" text="Guardar" textFill="#f2eeee">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" style="-fx-background-color: #000000;" text="Cancelar" textFill="#f2eeee">
+            <Button fx:id="botonCancelar" mnemonicParsing="false" onMouseClicked="#AccionAtras" style="-fx-background-color: #000000;" text="Cancelar" textFill="#f2eeee">
                <font>
                   <Font size="20.0" />
                </font>
