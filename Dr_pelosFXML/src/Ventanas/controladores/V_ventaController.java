@@ -11,8 +11,13 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import static util.Componente.inicializarComboCategoriaPaquete;
+import static util.Componente.inicializarComboTipo;
+import static util.Componente.inicializarComboTipoServicio;
 import static util.Ventana.cambiarVentana;
 
 /**
@@ -30,13 +35,24 @@ public class V_ventaController implements Initializable {
     private Button boton_buscar;
     @FXML
     private Button continuar_venta;
+    @FXML
+    private TextField nombre_producto;
+    @FXML
+    private TextField descripcion;
+    @FXML
+    private ComboBox<String> combo_categoria;
+    @FXML
+    private ComboBox<String> tipo;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        inicializarComboCategoriaPaquete(combo_categoria);
+        inicializarComboTipoServicio(combo_categoria);
+        inicializarComboTipo(tipo);
+        
     }    
 
     @FXML

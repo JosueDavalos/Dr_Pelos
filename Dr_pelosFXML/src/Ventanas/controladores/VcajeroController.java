@@ -65,7 +65,8 @@ public class VcajeroController implements Initializable {
     }
 
     @FXML
-    private void AccionTrasladoMascota(MouseEvent event) {
+    private void AccionTrasladoMascota(MouseEvent event) throws IOException {
+        cambiarVentana("/Ventanas/V_traslado_mascota.fxml",event, this);
     }
 
     @FXML

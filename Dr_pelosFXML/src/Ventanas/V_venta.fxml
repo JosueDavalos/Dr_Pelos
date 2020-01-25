@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -65,7 +66,7 @@
                               <Font name="System Bold" size="20.0" />
                            </font>
                         </Label>
-                        <TextField alignment="CENTER" GridPane.columnIndex="1" />
+                        <TextField fx:id="nombre_producto" alignment="CENTER" GridPane.columnIndex="1" />
                         <Label text="Descripcion:" GridPane.rowIndex="1">
                            <font>
                               <Font name="System Bold" size="20.0" />
@@ -76,26 +77,32 @@
                               <Font name="System Bold" size="20.0" />
                            </font>
                         </Label>
-                        <TextField alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <TextField alignment="CENTER" GridPane.columnIndex="3" />
+                        <TextField fx:id="descripcion" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <Button fx:id="boton_buscar" mnemonicParsing="false" onMouseClicked="#accion_buscar" style="-fx-background-color: #000000;" text="Buscar" textFill="#f5f5f5" GridPane.columnIndex="4" GridPane.rowIndex="2">
                            <font>
                               <Font name="System Bold" size="20.0" />
                            </font>
                         </Button>
+                        <ComboBox fx:id="combo_categoria" prefWidth="150.0" GridPane.columnIndex="3" />
+                        <Label alignment="CENTER_RIGHT" text="Tipo:" translateX="20.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="tipo" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
                </children>
             </HBox>
             <TableView prefHeight="323.0" prefWidth="1000.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="Codigo" />
-                <TableColumn prefWidth="75.0" text="Paquete" />
-                  <TableColumn prefWidth="75.0" text="Categoria" />
-                  <TableColumn prefWidth="211.33331298828125" text="Descripcion" />
-                  <TableColumn prefWidth="128.66668701171875" text="Cliente" />
-                  <TableColumn minWidth="0.0" prefWidth="301.33331298828125" text="Direccion de entrega" />
-                  <TableColumn prefWidth="131.0" text="Estado" />
+                <TableColumn prefWidth="145.33333587646484" text="Nombre" />
+                  <TableColumn prefWidth="126.33332824707031" text="Categoria" />
+                  <TableColumn prefWidth="92.0" text="Tipo" />
+                  <TableColumn prefWidth="276.0" text="Descripcion" />
+                  <TableColumn minWidth="0.0" prefWidth="116.0" text="Valor" />
+                  <TableColumn prefWidth="115.0" text="Estado" />
+                  <TableColumn prefWidth="127.0" text="Agregar Carrito" />
               </columns>
             </TableView>
          </children>

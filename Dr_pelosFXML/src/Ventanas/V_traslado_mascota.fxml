@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -43,7 +44,7 @@
                <children>
                   <ImageView fitHeight="150.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" translateX="-40.0">
                      <image>
-                        <Image url="@../imagenes/supermercado.png" />
+                        <Image url="@../imagenes/Traslado%20de%20mascota.png" />
                      </image>
                   </ImageView>
                   <GridPane alignment="CENTER" maxWidth="600.0" minWidth="657.0" prefHeight="89.0" prefWidth="657.0">
@@ -65,37 +66,43 @@
                               <Font name="System Bold" size="20.0" />
                            </font>
                         </Label>
-                        <TextField alignment="CENTER" GridPane.columnIndex="1" />
+                        <TextField fx:id="nombte_mascota" alignment="CENTER" GridPane.columnIndex="1" />
                         <Label text="Direccion:" GridPane.rowIndex="1">
                            <font>
                               <Font name="System Bold" size="20.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER_RIGHT" text="Tipo:" translateX="60.0" GridPane.columnIndex="2">
+                        <Label alignment="CENTER_RIGHT" text="Tipo:" translateX="55.0" GridPane.columnIndex="2">
                            <font>
                               <Font name="System Bold" size="20.0" />
                            </font>
                         </Label>
-                        <TextField alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <TextField alignment="CENTER" GridPane.columnIndex="3" />
+                        <TextField fx:id="direccion_mascota" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <Button fx:id="boton_buscar" mnemonicParsing="false" onMouseClicked="#accion_buscar" style="-fx-background-color: #000000;" text="Buscar" textFill="#f5f5f5" GridPane.columnIndex="4" GridPane.rowIndex="2">
                            <font>
                               <Font name="System Bold" size="20.0" />
                            </font>
                         </Button>
+                        <Label text="Estado:" translateX="55.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="combo_estado_entrega" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="combo_tipo" prefWidth="150.0" GridPane.columnIndex="3" />
                      </children>
                   </GridPane>
                </children>
             </HBox>
             <TableView prefHeight="323.0" prefWidth="1000.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="Codigo" />
-                <TableColumn prefWidth="75.0" text="Paquete" />
-                  <TableColumn prefWidth="75.0" text="Categoria" />
-                  <TableColumn prefWidth="211.33331298828125" text="Descripcion" />
-                  <TableColumn prefWidth="128.66668701171875" text="Cliente" />
-                  <TableColumn minWidth="0.0" prefWidth="301.33331298828125" text="Direccion de entrega" />
-                  <TableColumn prefWidth="131.0" text="Estado" />
+                <TableColumn prefWidth="92.33333587646484" text="Nombre" />
+                  <TableColumn prefWidth="94.0" text="Tipo" />
+                  <TableColumn prefWidth="176.0" text="Dueño" />
+                  <TableColumn prefWidth="128.66668701171875" text="Fecha Envio" />
+                  <TableColumn minWidth="0.0" prefWidth="292.0" text="Direccion de entrega" />
+                  <TableColumn minWidth="0.0" prefWidth="104.0" text="Fecha Entrega" />
+                  <TableColumn prefWidth="111.33331298828125" text="Estado" />
               </columns>
             </TableView>
          </children>

@@ -16,14 +16,14 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ventanas.controladores.VnuevoClienteController">
     <top>
-      <HBox alignment="TOP_CENTER" prefHeight="39.0" prefWidth="1000.0" spacing="250.0" translateY="15.0" BorderPane.alignment="CENTER">
+      <HBox alignment="TOP_CENTER" prefHeight="39.0" prefWidth="1000.0" spacing="235.0" translateY="15.0" BorderPane.alignment="CENTER">
          <children>
             <ImageView fx:id="botonAtras" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#AccionAtras" pickOnBounds="true" preserveRatio="true" translateX="-60.0">
                <image>
                   <Image url="@../imagenes/atras.png" />
                </image>
             </ImageView>
-            <Label text="Nombre de Usuario" textAlignment="CENTER" translateY="5.0">
+            <Label text="Agregar Nuevo Cliente" textAlignment="CENTER" translateY="5.0">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font></Label>

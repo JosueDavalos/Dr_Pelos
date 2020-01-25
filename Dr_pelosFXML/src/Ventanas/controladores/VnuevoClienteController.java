@@ -16,6 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import static util.Componente.inicializarComboGenero;
 import static util.Ventana.cambiarVentana;
 
 /**
@@ -32,7 +33,7 @@ public class VnuevoClienteController implements Initializable {
     @FXML
     private Button botonCancelar;
     @FXML
-    private ComboBox<?> combo_genero;
+    private ComboBox<String> combo_genero;
 
     public VnuevoClienteController() {
     }
@@ -42,7 +43,7 @@ public class VnuevoClienteController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        inicializarComboGenero(combo_genero);
     }    
     
 

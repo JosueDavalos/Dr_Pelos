@@ -5,13 +5,19 @@
  */
 package Ventanas;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import static util.Componente.inicializarComboEstadoEntrega;
+import static util.Componente.inicializarComboTipoMascota;
+import static util.Ventana.cambiarVentana;
 
 /**
  * FXML Controller class
@@ -28,21 +34,32 @@ public class V_traslado_mascotaController implements Initializable {
     private Button continuar_venta;
     @FXML
     private Button boton_buscar;
+    @FXML
+    private TextField nombte_mascota;
+    @FXML
+    private TextField direccion_mascota;
+    @FXML
+    private ComboBox<String> combo_estado_entrega;
+    @FXML
+    private ComboBox<String> combo_tipo;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        inicializarComboEstadoEntrega(combo_estado_entrega);
+        inicializarComboTipoMascota(combo_tipo);
     }    
 
     @FXML
-    private void action_Atras(MouseEvent event) {
+    private void action_Atras(MouseEvent event) throws IOException {
+        cambiarVentana("/Ventanas/Vcajero.fxml",event, this);
     }
 
     @FXML
-    private void action_cerrar_session(MouseEvent event) {
+    private void action_cerrar_session(MouseEvent event) throws IOException {
+        cambiarVentana("/dr_pelosfxml/Login.fxml",event, this);
     }
 
     @FXML

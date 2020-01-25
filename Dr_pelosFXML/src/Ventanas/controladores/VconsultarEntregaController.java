@@ -11,8 +11,12 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import static util.Componente.inicializarComboCategoriaPaquete;
+import static util.Componente.inicializarComboEstadoEntrega;
 import static util.Ventana.cambiarVentana;
 
 /**
@@ -28,13 +32,22 @@ public class VconsultarEntregaController implements Initializable {
     private ImageView boton_atras;
     @FXML
     private Button boton_buscar;
+    @FXML
+    private TextField nombre_paquete;
+    @FXML
+    private TextField descripcion_paquete;
+    @FXML
+    private ComboBox<String> estado_paquete;
+    @FXML
+    private ComboBox<String> categoria_paquete;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        inicializarComboEstadoEntrega(estado_paquete);
+        inicializarComboCategoriaPaquete(categoria_paquete);
     }    
 
     @FXML
