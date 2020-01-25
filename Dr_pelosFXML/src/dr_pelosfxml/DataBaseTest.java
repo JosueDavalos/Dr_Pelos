@@ -32,13 +32,18 @@ public class DataBaseTest {
            connection=DriverManager.getConnection(DB_URL,DB_USER,DB_PASSWD);
            statement=connection.createStatement();
            resultSet=statement.executeQuery
-              ("SELECT * FROM Producto");
+              ("SELECT * FROM Cliente;");
            while(resultSet.next()){
-              System.out.printf("%s\t%s\t%s\t%f\n",
+              System.out.printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n",
               resultSet.getInt(1),
               resultSet.getString(2),
               resultSet.getString(3),
-              resultSet.getDouble(4));
+              resultSet.getString(4),
+              resultSet.getString(5),
+              resultSet.getString(6),
+              resultSet.getString(7),
+              resultSet.getString(8),
+              resultSet.getString(9));
            }
 
         }catch(SQLException ex){
