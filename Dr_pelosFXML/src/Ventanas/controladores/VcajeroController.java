@@ -47,16 +47,12 @@ public class VcajeroController implements Initializable {
 
     @FXML
     private void ActionIngresarCliente(MouseEvent event) throws IOException {
-        cambiarVentana("/Ventanas/VnuevoCliente.fxml",event, this);
+        cambiarVentana("/Ventanas/V_cliente.fxml",event, this);
     }
 
     @FXML
     private void AccionConsultar(MouseEvent event) throws IOException {
         cambiarVentana("/Ventanas/VconsultarEntrega.fxml",event, this);
-    }
-
-    @FXML
-    private void AccionCotizar(MouseEvent event) {
     }
 
     @FXML

@@ -5,9 +5,7 @@
  */
 package dr_pelosfxml;
 
-import java.awt.Dimension;
 import javafx.scene.image.Image;
-import java.awt.Toolkit;
 import java.io.File;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

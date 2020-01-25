@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ventanas.V_clienteController">
+    <top>
+      <HBox alignment="TOP_CENTER" maxWidth="850.0" minWidth="900.0" prefHeight="39.0" prefWidth="900.0" spacing="370.0" translateY="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="boton_atras" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#action_Atras" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/atras.png" />
+               </image>
+            </ImageView>
+            <Label minWidth="104.0" prefHeight="36.0" prefWidth="104.0" text="Clientes" textAlignment="CENTER" translateY="5.0">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Label>
+            <ImageView fx:id="cerrar_sesion" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#action_cerrar_session" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/logout.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+    </top>
+    <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0" translateY="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" translateX="-40.0">
+                     <image>
+                        <Image url="@../imagenes/hombre.png" />
+                     </image>
+                  </ImageView>
+                  <GridPane alignment="CENTER" hgap="10.0" maxHeight="60.0" maxWidth="684.0" minHeight="70.0" minWidth="710.0" prefHeight="36.0" prefWidth="647.0" vgap="20.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.33334350585938" minWidth="10.0" prefWidth="102.33332824707031" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="138.66668701171875" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.66668701171875" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="307.33331298828125" minWidth="10.0" prefWidth="153.33331298828125" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.33331298828125" minWidth="10.0" prefWidth="120.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.33331298828125" minWidth="10.0" prefWidth="120.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="44.66667175292969" minHeight="10.0" prefHeight="35.33332824707031" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Cedula:">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="cedula" alignment="CENTER" GridPane.columnIndex="1" />
+                        <Label text="Nombre:" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" text="Apellido:" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nombre" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="boton_buscar" mnemonicParsing="false" onMouseClicked="#accion_buscar" prefHeight="39.0" prefWidth="95.0" style="-fx-background-color: #000000;" text="Buscar" textFill="#f5f5f5" translateX="20.0" GridPane.columnIndex="4">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Label text="Genero:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="combo_genero" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Button fx:id="eliminar_cliente" mnemonicParsing="false" onMouseClicked="#accion_eliminar_cliente" style="-fx-background-color: #000000;" text="Eliminar" textFill="#f5f5f5" translateX="20.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="apellido" GridPane.columnIndex="3" />
+                        <Button fx:id="nuevo_cliente" mnemonicParsing="false" onMouseClicked="#accion_nuevo_cliente" style="-fx-background-color: #000000;" text="+ Nuevo" textFill="#f5f5f5" translateX="10.0" GridPane.columnIndex="5">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <TableView fx:id="tabla_cliente" prefHeight="323.0" prefWidth="1000.0">
+              <columns>
+                  <TableColumn fx:id="col_cedula" prefWidth="105.0" text="Cedula" />
+                <TableColumn fx:id="col_nombre" onEditCommit="#cambiar_nombre" prefWidth="110.33334350585938" text="Nombre" />
+                  <TableColumn fx:id="col_apellido" prefWidth="97.0" text="Apellido" />
+                  <TableColumn fx:id="col_nacimiento" prefWidth="127.66668701171875" text="Fecha Nacimiento" />
+                  <TableColumn fx:id="col_genero" minWidth="0.0" prefWidth="80.6666259765625" text="Genero" />
+                  <TableColumn fx:id="col_correo" minWidth="0.0" prefWidth="192.3333740234375" text="Correo" />
+                  <TableColumn minWidth="0.0" prefWidth="186.33331298828125" text="Direccion" />
+                  <TableColumn prefWidth="96.0" text="Telefono" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
