@@ -1,29 +1,13 @@
 use dr_pelos;
 
-insert into JefeBodega(cedula, nombre, apellido, genero) values ("0123429767","Tamara","Flores Davalos","F");
-insert into JefeBodega(cedula, nombre, apellido, genero) values ("0870341019","Crithina","Vera Bermudez","F");
-insert into JefeBodega(cedula, nombre, apellido, genero) values ("0452034418","Melany","Sanzhez","F");
-insert into JefeBodega(cedula, nombre, apellido, genero) values ("0300246437","Crithina","Figueroa Mera","F");
-insert into JefeBodega(cedula, nombre, apellido, genero) values ("0976892676","Raul","Morena Cedeño","F");
-insert into JefeBodega(cedula, nombre, apellido, genero) values ("0018902556","Domenica","Davalos","F");
-insert into JefeBodega(cedula, nombre, apellido, genero) values ("0715787593","Tamara","Figueroa Figueroa","F");
-insert into JefeBodega(cedula, nombre, apellido, genero) values ("0275622694","Paulette","Bonilla","F");
-insert into JefeBodega(cedula, nombre, apellido, genero) values ("0483386297","Crithina","Morena","F");
-insert into JefeBodega(cedula, nombre, apellido, genero) values ("0591959346","Tamara","Bermudez","F");
-insert into JefeBodega(cedula, nombre, apellido, genero) values ("0765274817","Jonathan","Piero Tobar","F");
+insert into JefeBodega(cedula, nombre, apellido, genero) values ("0931657365","Bryan","Davalos","M");
+insert into JefeBodega(cedula, nombre, apellido, genero) values ("0958745698","Josue","Sanchez","M");
+insert into JefeBodega(cedula, nombre, apellido, genero) values ("0956985889","Erick","Vaca","M");
+insert into JefeBodega(cedula, nombre, apellido, genero) values ("0956592330","Eunice","Gorotiza","F");
+insert into JefeBodega(cedula, nombre, apellido, genero) values ("0905899128","Carlos","Vazquez","M");
+insert into JefeBodega(cedula, nombre, apellido, genero) values ("0296999941","Xiomara","Mera","F");
+insert into JefeBodega(cedula, nombre, apellido, genero) values ("0795989541","Jocellyne","Luna","F");
 
-insert into Cliente(cedula, nombre, apellido, genero, FechaNacimiento, correo, direccion, telefono) values ("0072150771","Zoila","Cordova","F","1992-09-11","rxmegq@hotmail.es","Calle Luis Cordero 16-50 y Av. Héroes de Verdeloma","0174422545");
-insert into Cliente(cedula, nombre, apellido, genero, FechaNacimiento, correo, direccion, telefono) values ("0185409059","Melany","Carrera","F","1982-06-14","rmoumdyo@gmail.com","Ciudadela California, calle Chone, entre Junín y Santa Ana","0752477407");
-insert into Cliente(cedula, nombre, apellido, genero, FechaNacimiento, correo, direccion, telefono) values ("0245698039","Crithina","Figueroa Cordova","F","1977-12-01","cblp@hotmail.es","Av. 9 de Octubre N27-75 y Berlín","0964399835");
-insert into Cliente(cedula, nombre, apellido, genero, FechaNacimiento, correo, direccion, telefono) values ("0915727278","Jefferson","Pulla Davalos","F","1993-11-12","yepmhq@outlook.es","Ciudadela California, calle Chone, entre Junín y Santa Ana","0675553839");
-insert into Cliente(cedula, nombre, apellido, genero, FechaNacimiento, correo, direccion, telefono) values ("0587833745","Erick","Cordova","F","2001-04-26","xovig@hotmail.es","Cdla. IETEL, Mz 28 lote 1","0196385531");
-insert into Cliente(cedula, nombre, apellido, genero, FechaNacimiento, correo, direccion, telefono) values ("0993060662","Milena","Tobar","F","1987-02-20","mpwqnwk@espol.edu.ec","Av. 9 de Octubre N27-75 y Berlín","0282984328");
-insert into Cliente(cedula, nombre, apellido, genero, FechaNacimiento, correo, direccion, telefono) values ("0982632889","Paulette","Vazquez","F","1996-06-16","uzmgifbk@hotmail.es","Av. Circunvalación y Av. Río Aguarico","0088590572");
-insert into Cliente(cedula, nombre, apellido, genero, FechaNacimiento, correo, direccion, telefono) values ("0711672730","Diana","Pulla","F","1992-09-06","oztwexpt@gmail.com","Av. 9 de Octubre N 27-75 y Berlín","0051389664");
-insert into Cliente(cedula, nombre, apellido, genero, FechaNacimiento, correo, direccion, telefono) values ("0542758891","Renato","Cedeño","F","1978-08-24","vnqf@outlook.es","Estación de Comprobación Técnica Vía Chambo Km 2","0741783438");
-insert into Cliente(cedula, nombre, apellido, genero, FechaNacimiento, correo, direccion, telefono) values ("0848760370","Raul","Jacho Bonilla","F","1972-06-10","rcdmzp@hotmail.com","Av. 9 de Octubre N27-75 y Berlín","0692525345");
-insert into Cliente(cedula, nombre, apellido, genero, FechaNacimiento, correo, direccion, telefono) values ("0091771707","Diana","Piero Vera","F","1991-01-21","zbrvvr@outlook.es","Av. 9 de Octubre N27-75 y Berlín","0743250380");
-insert into Cliente(cedula, nombre, apellido, genero, FechaNacimiento, correo, direccion, telefono) values ("0313390456","Carlos","Mera Figueroa","F","1976-05-12","lkuafyg@gmail.com","Estación de Comprobación Técnica Vía Chambo Km 2","0763305030");
 insert into Cliente(cedula, nombre, apellido, FechaNacimiento, genero, correo, direccion, telefono) Values ("0931657365","Bryan","Sanchez","1999-12-18","M","brymsanc@espol.edu.ec","Acuarela del rio Mz 2 V1","0989195454");
 insert into Cliente(cedula, nombre, apellido, FechaNacimiento, genero, correo, direccion, telefono) Values ("7894561230","Mois","Cabezas","1999-12-25","M","bmsa@espol.edu.ec","Sauces","0989845621");
 insert into Cliente(cedula, nombre, apellido, FechaNacimiento, genero, correo, direccion, telefono) Values ("1234560785","Josue","Davalos","1990-01-02","M","josuetunene@gmail.com","Acuarela del rio Mz 2 V1","0935698745");
@@ -45,12 +29,12 @@ insert into Producto(nombre, categoria, precio) values ("Hueso comestible","Alim
 insert into Producto(nombre, categoria, precio) values ("Pelota saltarina","Juguete",1.00);
 insert into Producto(nombre, categoria, precio) values ("Cereal pequeño","Alimento",5.55);
 
-insert into sucursal(direccion) values ("Sauce 2 C 3era. Av. 8va.");
-insert into sucursal(direccion) values ("Ceibos cuidadela Cumbres");
-insert into sucursal(direccion) values ("Mapsingue Oeste, 5 1/9 km Via daule");
-insert into sucursal(direccion) values ("Centro, boyaca y aguirre");
-insert into sucursal(direccion) values ("Villa España");
-insert into sucursal(direccion) values ("La joya");
+insert into Sucursal(direccion) values ("Sauce 2 C 3era. Av. 8va.");
+insert into Sucursal(direccion) values ("Ceibos cuidadela Cumbres");
+insert into Sucursal(direccion) values ("Mapsingue Oeste, 5 1/9 km Via daule");
+insert into Sucursal(direccion) values ("Centro, boyaca y aguirre");
+insert into Sucursal(direccion) values ("Villa España");
+insert into Sucursal(direccion) values ("La joya");
 
 insert into Repartidor(cedula, nombre, apellido, genero) values ("0931548765","Robert","Mera","M");
 insert into Repartidor(cedula, nombre, apellido, genero) values ("0995648549","Domenica","Ochoa","F");
