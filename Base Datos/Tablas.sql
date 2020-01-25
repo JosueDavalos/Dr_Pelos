@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS dr_pelos.Cliente (
   genero char(1)  NOT NULL,
   correo varchar(50) not null,
   FechaNacimiento DATE NOT NULL,
-  direccion VARCHAR(100) NOT NULL,
+  direccion VARCHAR(50) NOT NULL,
   telefono VARCHAR(15) NOT NULL,
   PRIMARY KEY (ID))
 ENGINE = InnoDB;
@@ -113,12 +113,12 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS dr_pelos.FormaPago (
   ID INT NOT NULL AUTO_INCREMENT,
-  factura INT,
-  ncredito INT,
-  cotizacion INT,
+  factura INT(11),
+  ncredito INT(11),
+  cotizacion INT(11),
   PRIMARY KEY (ID),
-  foreign key (factura) references dr_pelos.factura (ID),
-  foreign key (ncredito) references dr_pelos.ncredito (ID),
+  foreign key (factura) references dr_pelos.Factura (ID),
+  foreign key (ncredito) references dr_pelos.nCredito (ID),
   foreign key (cotizacion) references dr_pelos.cotizacion (ID))
 ENGINE = InnoDB;
 
@@ -155,8 +155,8 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS dr_pelos.ProductoSucursal (
   producto INT NOT NULL,
   sucursal INT NOT NULL,
-  foreign key (producto) references dr_pelos.producto (ID),
-  foreign key (sucursal) references dr_pelos.sucursal (ID))
+  foreign key (producto) references dr_pelos.Producto (ID),
+  foreign key (sucursal) references dr_pelos.Sucursal (ID))
 ENGINE = InnoDB;
 
 
@@ -170,10 +170,10 @@ CREATE TABLE IF NOT EXISTS dr_pelos.Pago (
   sucursal INT NOT NULL,
   formaPago INT NOT NULL,
   detallePago INT NOT NULL,
-  foreign key (producto) references dr_pelos.producto (ID),
-  foreign key (cliente) references dr_pelos.cliente (ID),
-  foreign key (formaPago) references dr_pelos.formaPago (ID),
-  foreign key (detallePago) references dr_pelos.detallePago (ID))
+  foreign key (producto) references dr_pelos.Producto (ID),
+  foreign key (cliente) references dr_pelos.Cliente (ID),
+  foreign key (formaPago) references dr_pelos.FormaPago (ID),
+  foreign key (detallePago) references dr_pelos.DetallePago (ID))
 ENGINE = InnoDB;
 
 
