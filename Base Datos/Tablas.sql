@@ -149,7 +149,7 @@ CREATE TABLE IF NOT EXISTS dr_pelos.DocumentoEntrega (
   paquete INT NOT NULL,
   PRIMARY KEY (ID),
   foreign key (repartidor) references dr_pelos.Repartidor (ID),
-  foreign key (paquete) references dr_pelos.paquete (ID),
+  foreign key (paquete) references dr_pelos.Paquete (ID),
   foreign key (jefeBodega) references dr_pelos.JefeBodega (ID))
 ENGINE = InnoDB;
 
@@ -200,8 +200,8 @@ CREATE TABLE IF NOT EXISTS dr_pelos.infoPaquete (
   paquete INT NOT NULL,
   producto int not null,
   PRIMARY KEY (paquete, producto),
-  foreign key (paquete) references dr_pelos.paquete (ID),
-  foreign key (producto) references dr_pelos.producto (ID))
+  foreign key (paquete) references dr_pelos.Paquete (ID),
+  foreign key (producto) references dr_pelos.Producto (ID))
 ENGINE = InnoDB;
 
 -- -----------------------------------------------------
@@ -214,7 +214,7 @@ CREATE TABLE IF NOT EXISTS dr_pelos.Mascota (
   tipo varchar(50) NOT NULL,
   fechaNacimiento Date not null,
   PRIMARY KEY (ID),
-  foreign key (dueño) references dr_pelos.cliente (ID))
+  foreign key (dueño) references dr_pelos.Cliente (ID))
 ENGINE = InnoDB;
 
 -- -----------------------------------------------------
@@ -229,7 +229,7 @@ CREATE TABLE IF NOT EXISTS dr_pelos.TrasladoMascota (
   estado varchar(20) default "Pendiente",
   direccion varchar(75) not null,
   PRIMARY KEY (ID),
-  foreign key (dueño) references dr_pelos.cliente (ID),
-  foreign key (mascota) references dr_pelos.mascota (ID))
+  foreign key (dueño) references dr_pelos.Cliente (ID),
+  foreign key (mascota) references dr_pelos.Mascota (ID))
 ENGINE = InnoDB;
 
