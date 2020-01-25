@@ -135,3 +135,15 @@ insert into Pago(producto,cliente,sucursal,formaPago,detallePago,fecha) values (
 insert into Pago(producto,cliente,sucursal,formaPago,detallePago,fecha) values (3,3,3,2,3,"2019-12-12");
 insert into Pago(producto,cliente,sucursal,formaPago,detallePago,fecha) values (5,3,1,4,4,"2019-12-13");
 insert into Pago(producto,cliente,sucursal,formaPago,detallePago,fecha) values (4,1,2,1,5,"2019-12-12");
+
+
+insert into mascota(dueño,nombre,tipo,fechaNacimiento) 
+	values (1,"Firulais","Canino","2018-12-07"), 
+			(2,"Chakira","Canino","2018-11-28"),
+            (3,"Ebola","Felino","2018-02-28"),
+            (4,"Mini","Felino","2017-12-18");
+
+#Falta crear dattos de paquetes y en la tabla infopaquete, y agrelarlos en la tabla de documento de entrega
+# creas mas macotas y datos para la tabla traslado de mascota
+
+#insert into TrasladoMascota(dueño,nombre,fechaEnvio,fechaEntrega,direccion) values (1,"firulais", "")

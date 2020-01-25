@@ -220,7 +220,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `dr_pelos`.`TranasladoMascota`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS dr_pelos.TranasladoMascota (
+CREATE TABLE IF NOT EXISTS dr_pelos.TrasladoMascota (
   ID INT NOT NULL AUTO_INCREMENT,
   dueño INT NOT NULL,
   mascota int NOT NULL,
