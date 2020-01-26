@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 public class MySQLConnection {
     private static MySQLConnection instance;
     private IConnection connection;
-    private String url = "jdbc:mysql://192.168.100.46:3306/dr_pelos";
+    private String url = "jdbc:mysql://127.0.0.1:3307/dr_pelos";
     public static String username = "root";
     public static String password = "123";
     
