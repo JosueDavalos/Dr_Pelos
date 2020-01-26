@@ -6,5 +6,7 @@
 /Dr_PelosXml/dist/
 /Dr_PelosXml/build/
 /Dr_pelosFXML/nbproject/private/
-/Dr_pelosFXML/dist/
+/Dr_pelosFXML/dist/web-files/
+/Dr_pelosFXML/dist/*.html
+/Dr_pelosFXML/dist/*.jar
 /Dr_pelosFXML/build/
