@@ -16,7 +16,7 @@ public class ConnectionDataBase {
          this.connectionFactory = conecctionFactory;
     }
     
-    public void start(DBType db_type, String username, String password){
+    public void start(DBType db_type, String username, String password) throws Exception{
         IConnection connection = connectionFactory.getConnection();
         connection.connect(username,password);
     }

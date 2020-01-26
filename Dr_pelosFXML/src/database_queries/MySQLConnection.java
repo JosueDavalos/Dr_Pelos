@@ -27,12 +27,12 @@ public class MySQLConnection {
     public static String username = "root";
     public static String password = "123";
     
-    private MySQLConnection(String username, String password){
+    private MySQLConnection(String username, String password) throws Exception{
         connection = new MySqlConnectionFactory();
         connection.connect(username, password);
     }
     
-    public static void start(String user, String password){
+    public static void start(String user, String password) throws Exception{
         instance = new MySQLConnection(user,password);
     }
     

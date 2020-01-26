@@ -12,9 +12,12 @@ import database_queries.MySQLConnection;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -33,6 +36,8 @@ public class LoginController implements Initializable {
     private TextField user;
     @FXML
     private PasswordField password;
+    @FXML
+    private Label errorMssg;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -41,8 +46,13 @@ public class LoginController implements Initializable {
     
     @FXML
     private void AccionIngresar(MouseEvent event) throws IOException {
-        MySQLConnection.start(user.getText(), password.getText());
-        cambiarVentana("/Ventanas/Vcajero.fxml",event, this);
+        try {
+            MySQLConnection.start(user.getText(), password.getText());
+            cambiarVentana("/Ventanas/Vcajero.fxml",event, this);
+        } catch (Exception ex) {
+            errorMssg.setText("Usuario o Contraseña invalido");
+        }
+        
     }
 
     @FXML

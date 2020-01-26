@@ -22,12 +22,8 @@ public class MySqlConnectionFactory implements IConnection{
     private String url = "jdbc:mysql://192.168.100.46:3306/dr_pelos";
     
     @Override
-    public void connect(String username, String password) {
-        try {
-            this.connection = DriverManager.getConnection(url, username, password);
-        } catch (SQLException ex) {
-            Logger.getLogger(MySqlConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public void connect(String username, String password) throws Exception{
+        this.connection = DriverManager.getConnection(url, username, password);
     }
     
     @Override

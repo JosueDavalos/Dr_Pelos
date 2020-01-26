@@ -35,7 +35,7 @@
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Iniciar Session" translateY="-50.0">
+            <Label text="Iniciar Sesión" translateY="-50.0">
                <font>
                   <Font name="System Bold" size="45.0" />
                </font>
@@ -57,6 +57,7 @@
                </font>
             </Label>
             <PasswordField fx:id="password" maxWidth="300.0" prefHeight="30.0" />
+            <Label fx:id="errorMssg" textFill="#e80000" />
          </children>
       </VBox>
    </center>
