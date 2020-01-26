@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS dr_pelos.Cliente (
   cedula VARCHAR(10) NOT NULL,
   nombre VARCHAR(50) NOT NULL,
   apellido VARCHAR(50) NOT NULL,
-  genero char(1)  NOT NULL,
+  genero enum("M","F")   NOT NULL,
   correo varchar(50) not null,
   FechaNacimiento DATE NOT NULL,
   direccion VARCHAR(50) NOT NULL,
@@ -132,7 +132,7 @@ CREATE TABLE IF NOT EXISTS dr_pelos.Paquete (
   fechaEnvio DATE NOT NULL,
   fechaEntrega DATE NOT NULL,
   direccion varchar(100) NOT NULL,
-  estado varchar(20) not Null default "Pendiente",
+  estado enum("Pendiente","Entregado") default "Pendiente",
   PRIMARY KEY (ID),
   foreign key (cliente) references dr_pelos.Cliente (ID))
 ENGINE = InnoDB;
@@ -211,7 +211,7 @@ CREATE TABLE IF NOT EXISTS dr_pelos.Mascota (
   ID INT NOT NULL AUTO_INCREMENT,
   dueño INT NOT NULL,
   nombre varchar(50) not null,
-  tipo varchar(50) NOT NULL,
+  tipo enum("Canino","Felino"),
   fechaNacimiento Date not null,
   PRIMARY KEY (ID),
   foreign key (dueño) references dr_pelos.Cliente (ID))
@@ -226,7 +226,7 @@ CREATE TABLE IF NOT EXISTS dr_pelos.TrasladoMascota (
   mascota int NOT NULL,
   fechaEnvio DATE NOT NULL,
   fechaEntrega DATE NOT NULL,
-  estado varchar(20) default "Pendiente",
+  estado enum("Pendiente","Entregado") default "Pendiente",
   direccion varchar(75) not null,
   PRIMARY KEY (ID),
   foreign key (dueño) references dr_pelos.Cliente (ID),

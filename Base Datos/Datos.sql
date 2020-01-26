@@ -197,13 +197,13 @@ insert into Mascota(dueño,nombre,tipo,fechaNacimiento) values (4,"Bagatele","Ca
 insert into Mascota(dueño,nombre,tipo,fechaNacimiento) values (2,"Beatle","Canino","2018-12-02");
 
 insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (1,1,"2020-01-25","2020-01-26","Pendiente","Acuarela del rio Mz2 V1");
-insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (2,2,"2020-01-24","2020-01-26","Pendiente","Colina de los Ceibos Mz 34");
-insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (3,3,"2020-01-23","2020-01-27","Entregado","Sauces 7 Mz 4");
-insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (4,4,"2020-01-22","2020-01-28","Entregado","Alban Borja");
-insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (5,5,"2020-01-24","2020-01-27","Entregado","Ceibos Norte Mz 40");
-insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (6,6,"2020-01-22","2020-01-26","Pendiente","Guayacanes");
+insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (2,2,"2020-01-24","2020-01-25","Entregado","Colina de los Ceibos Mz 34");
+insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (3,3,"2020-01-23","2020-01-27","Pendiente","Sauces 7 Mz 4");
+insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (4,4,"2020-01-22","2020-01-25","Entregado","Alban Borja");
+insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (5,5,"2020-01-24","2020-01-27","Pendiente","Ceibos Norte Mz 40");
+insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (6,6,"2020-01-22","2020-01-25","Entregado","Guayacanes");
 insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (7,7,"2020-01-22","2020-01-26","Pendiente","Colina de los Ceibos Mz 34");
-insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (8,8,"2020-01-21","2020-01-27","Entregado","Alban Borja");
-insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (9,9,"2020-01-20","2020-01-26","Entregado","Acuarela del rio Mz33 V1");
-insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (1,10,"2020-01-20","2020-01-27","Pendiente","Colina de los Ceibos Mz 34");
+insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (8,8,"2020-01-21","2020-01-25","Entregado","Alban Borja");
+insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (9,9,"2020-01-20","2020-01-25","Entregado","Acuarela del rio Mz33 V1");
+insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (1,10,"2020-01-20","2020-01-25","Entregado","Colina de los Ceibos Mz 34");
 insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (2,11,"2020-01-20","2020-01-28","Pendiente","Acuarela del rio Mz25 V1");
