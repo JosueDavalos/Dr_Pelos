@@ -15,7 +15,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import usuarios.Cliente;
+import usuario.Cliente;
 import static util.Componente.inicializarComboCategoriaPaquete;
 import static util.Componente.inicializarComboEstadoEntrega;
 import static util.Ventana.cambiarVentana;

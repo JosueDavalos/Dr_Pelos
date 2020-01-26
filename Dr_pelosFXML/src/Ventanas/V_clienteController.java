@@ -26,7 +26,7 @@ import static javafx.scene.input.KeyCode.T;
 import javafx.scene.input.MouseEvent;
 import static javax.swing.text.html.HTML.Tag.S;
 import static jdk.nashorn.internal.runtime.regexp.joni.constants.AsmConstants.S;
-import usuarios.Cliente;
+import usuario.Cliente;
 import static util.Componente.inicializarComboGenero;
 import static util.Datos.atributosCliente;
 import static util.Datos.getClientes;
