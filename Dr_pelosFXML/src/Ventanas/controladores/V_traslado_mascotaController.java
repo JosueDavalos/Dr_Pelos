@@ -5,6 +5,8 @@
  */
 package Ventanas.controladores;
 
+import TDAs.Traslado;
+import TDAs.Venta;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -12,11 +14,17 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import static util.Componente.inicializarComboEstadoEntrega;
 import static util.Componente.inicializarComboTipoMascota;
+import static util.Datos.atributosTraslados;
+import static util.Datos.atributosVentas;
+import static util.QueryFachade.getTrasladosDB;
 import static util.Ventana.cambiarVentana;
 
 /**
@@ -42,6 +50,8 @@ public class V_traslado_mascotaController implements Initializable {
     private ComboBox<String> combo_estado_entrega;
     @FXML
     private ComboBox<String> combo_tipo;
+    @FXML
+    private TableView<Traslado> table_traslado;
 
     /**
      * Initializes the controller class.
@@ -49,7 +59,17 @@ public class V_traslado_mascotaController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         inicializarComboEstadoEntrega(combo_estado_entrega);
+        
         inicializarComboTipoMascota(combo_tipo);
+        String[] atributos = atributosTraslados();
+        
+        int i =0;
+        for(TableColumn<Traslado,?> col: table_traslado.getColumns()){
+            col.setStyle( "-fx-alignment: CENTER;");
+            col.setCellValueFactory(new PropertyValueFactory<>(atributos[i++]));
+        }
+        table_traslado.getItems().addAll(getTrasladosDB());    
+        
     }    
 
     @FXML

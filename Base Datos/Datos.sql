@@ -216,5 +216,9 @@ insert into TrasladoMascota(dueno,mascota,fechaEnvio,fechaEntrega,estado,direcci
 
 select * from Servicio;
 
+select m.nombre, m.tipo, d.nombre, d.apellido, t.fechaEnvio, t.fechaEntrega, t.direccion, t.estado from Mascota m 
+join TrasladoMascota t on m.dueno=t.dueno
+join Cliente d on d.ID=m.dueno;
+
 
 

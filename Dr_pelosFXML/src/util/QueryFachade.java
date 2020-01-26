@@ -6,6 +6,7 @@
 package util;
 
 import TDAs.Paquete;
+import TDAs.Traslado;
 import TDAs.Venta;
 import database_queries.MySQLConnection;
 import java.sql.ResultSet;
@@ -62,11 +63,10 @@ public class QueryFachade {
     
     public static List<Venta> getServiciosDB() {
         List<Venta> ventas = new LinkedList<>();
-        ResultSet rs = makeQuerySelect("select p.ID, c.nombre, c.apellido, p.fechaEnvio, p.fechaEntrega, p.direccion, p.estado from Paquete p\n" +
-                                        "join Cliente c where c.ID= p.cliente;");
+        ResultSet rs = makeQuerySelect("select * from Servicio;");
         try {
             while(rs.next()){
-                Venta c = new Venta(rs.getString(1),rs.getString(2),rs.getString(3), rs.getString(4), rs.getString(5));
+                Venta c = new Venta(rs.getString(2),rs.getString(3),rs.getString(5), rs.getString(4), rs.getString(6));
                 ventas.add(c);
             }
         } catch (SQLException ex) {
@@ -77,16 +77,31 @@ public class QueryFachade {
     
     public static List<Venta> getProductosDB() {
         List<Venta> ventas = new LinkedList<>();
-        ResultSet rs = makeQuerySelect("select p.ID, c.nombre, c.apellido, p.fechaEnvio, p.fechaEntrega, p.direccion, p.estado from Paquete p\n" +
-                                        "join Cliente c where c.ID= p.cliente;");
+        ResultSet rs = makeQuerySelect("select * from Producto;");
         try {
             while(rs.next()){
-                Venta c = new Venta(rs.getString(1),rs.getString(2),rs.getString(3), rs.getString(4), rs.getString(5));
+                Venta c = new Venta(rs.getString(2),rs.getString(3),rs.getString(5), rs.getString(4), rs.getString(6));
                 ventas.add(c);
             }
         } catch (SQLException ex) {
             Logger.getLogger(QueryFachade.class.getName()).log(Level.SEVERE, null, ex);
         }
         return ventas;
+    }
+    
+    public static List<Traslado> getTrasladosDB() {
+        List<Traslado> traslados = new LinkedList<>();
+        ResultSet rs = makeQuerySelect("select m.nombre, m.tipo, d.nombre, d.apellido, t.fechaEnvio, t.fechaEntrega, t.direccion, t.estado from Mascota m \n" +
+                                        "join TrasladoMascota t on m.dueno=t.dueno\n" +
+                                        "join Cliente d on d.ID=m.dueno;");
+        try {
+            while(rs.next()){
+                Traslado c = new Traslado(rs.getString(1),rs.getString(2),rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7));
+                traslados.add(c);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(QueryFachade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return traslados;
     }
 }

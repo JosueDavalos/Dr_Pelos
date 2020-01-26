@@ -27,6 +27,7 @@ import static util.Datos.atributosPaquetes;
 import static util.Datos.atributosVentas;
 import static util.QueryFachade.getPaquetesDB;
 import static util.QueryFachade.getProductosDB;
+import static util.QueryFachade.getServiciosDB;
 import static util.Ventana.cambiarVentana;
 
 /**
@@ -71,8 +72,8 @@ public class V_ventaController implements Initializable {
             col.setStyle( "-fx-alignment: CENTER;");
             col.setCellValueFactory(new PropertyValueFactory<>(atributos[i++]));
         }
-        //table_venta.getItems().addAll(getProductosDB());    
-        
+        table_venta.getItems().addAll(getProductosDB());    
+        table_venta.getItems().addAll(getServiciosDB()); 
     }    
 
     @FXML

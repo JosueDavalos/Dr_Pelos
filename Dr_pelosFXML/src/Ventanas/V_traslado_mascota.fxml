@@ -94,7 +94,7 @@
                   </GridPane>
                </children>
             </HBox>
-            <TableView prefHeight="323.0" prefWidth="1000.0">
+            <TableView fx:id="table_traslado" prefHeight="323.0" prefWidth="1000.0">
               <columns>
                 <TableColumn prefWidth="92.33333587646484" text="Nombre" />
                   <TableColumn prefWidth="94.0" text="Tipo" />

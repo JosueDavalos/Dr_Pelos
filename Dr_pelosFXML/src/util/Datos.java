@@ -29,4 +29,9 @@ public class Datos {
         return atributos;
     }
     
+    public static String[] atributosTraslados(){
+        String[] atributos = {"nombre","tipo","dueño","fecha_envio","fecha_entrega","direccion","estado"};
+        return atributos;
+    }
+    
 }
