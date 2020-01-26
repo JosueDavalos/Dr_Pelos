@@ -94,12 +94,11 @@
                   </GridPane>
                </children>
             </HBox>
-            <TableView prefHeight="323.0" prefWidth="1000.0">
+            <TableView fx:id="table_venta" prefHeight="323.0" prefWidth="1000.0">
               <columns>
                 <TableColumn prefWidth="145.33333587646484" text="Nombre" />
                   <TableColumn prefWidth="126.33332824707031" text="Categoria" />
                   <TableColumn prefWidth="92.0" text="Tipo" />
-                  <TableColumn prefWidth="276.0" text="Descripcion" />
                   <TableColumn minWidth="0.0" prefWidth="116.0" text="Valor" />
                   <TableColumn prefWidth="115.0" text="Estado" />
                   <TableColumn prefWidth="127.0" text="Agregar Carrito" />

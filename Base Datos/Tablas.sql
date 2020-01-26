@@ -40,6 +40,8 @@ CREATE TABLE IF NOT EXISTS dr_pelos.Producto (
   nombre VARCHAR(50) NOT NULL,
   categoria VARCHAR(50) NOT NULL,
   precio double not null,
+  tipo varchar(15) default "Producto",
+  estado varchar(15) default "Disponible",
   PRIMARY KEY (ID))
 ENGINE = InnoDB;
 
@@ -51,6 +53,9 @@ CREATE TABLE IF NOT EXISTS dr_pelos.Servicio (
   ID INT NOT NULL AUTO_INCREMENT,
   nombre VARCHAR(50) NOT NULL,
   categoria VARCHAR(50) NOT NULL,
+  precio double not null,
+  tipo varchar(15) default "Servicio",
+  estado varchar(15) default "Disponible",
   PRIMARY KEY (ID))
 ENGINE = InnoDB;
 

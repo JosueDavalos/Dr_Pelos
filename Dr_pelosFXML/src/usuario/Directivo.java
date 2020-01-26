@@ -12,10 +12,15 @@ import controlador.CreatorGestor;
  */
 public class Directivo extends Usuario{
     //private IGestorEntidad igestorEntidad;
-    public Directivo(String cedula, String nombre, String apellido, String genero, String fechaNacimiento, String correo, String direccion, String telefono) {
-        super(cedula, nombre, apellido, genero, fechaNacimiento, correo, direccion, telefono);
+    
+   
+    
+    public Directivo( String cedula, String nombre, String apellido, String genero, String correo, String fechaNacimiento, String direccion, String telefono){ 
+        super(cedula, nombre, apellido, genero, correo, fechaNacimiento, direccion, telefono);
     }
-    public IGestorEntidad gestionarInformacion( CreatorGestor creator){ //new ConcreteCreator le puede enviar
+
+    public IGestorEntidad gestionarInformacion(CreatorGestor creator) {
+        //new ConcreteCreator le puede enviar
         IGestorEntidad igestorEntidad  = creator.factoryMethod();
         return igestorEntidad; //Aqui le retorna el gestor de la entidad para 
     }

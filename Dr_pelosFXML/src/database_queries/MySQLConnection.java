@@ -6,7 +6,7 @@
 package database_queries;
 
 import DataBase_patronAbstract.IConnection;
-import DataBase_patronAbstract.MySqlConnect;
+import DataBase_patronAbstract.MySqlConnectionFactory;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -28,7 +28,7 @@ public class MySQLConnection {
     public static String password = "123";
     
     private MySQLConnection(String username, String password){
-        connection = new MySqlConnect();
+        connection = new MySqlConnectionFactory();
         connection.connect(username, password);
     }
     

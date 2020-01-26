@@ -13,10 +13,12 @@ import controlador.IGestorEntidad;
  * @author jeffer
  */
 public class PersonalCaja extends Usuario{
-    
-    public PersonalCaja(String cedula, String nombre, String apellido, String genero, String fechaNacimiento, String correo, String direccion, String telefono) {
-        super(cedula, nombre, apellido, genero, fechaNacimiento, correo, direccion, telefono);
+
+    public PersonalCaja(String cedula, String nombre, String apellido, String genero, String correo, String fechaNacimiento, String direccion, String telefono) {
+        super(cedula, nombre, apellido, genero, correo, fechaNacimiento, direccion, telefono);
     }
+    
+   
     
         public IGestorEntidad gestionarInformacion( CreatorGestor creator){ //new ConcreteCreator le puede enviar
         IGestorEntidad igestorEntidad  = creator.factoryMethod();

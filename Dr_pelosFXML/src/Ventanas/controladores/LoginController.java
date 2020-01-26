@@ -7,7 +7,7 @@ package Ventanas.controladores;
 
 
 import DataBase_patronAbstract.IConnection;
-import DataBase_patronAbstract.MySqlConnect;
+import DataBase_patronAbstract.MySqlConnectionFactory;
 import database_queries.MySQLConnection;
 import java.io.IOException;
 import java.net.URL;

@@ -6,7 +6,7 @@
 package dr_pelosfxml;
 
 import DataBase_patronAbstract.IConnection;
-import DataBase_patronAbstract.MySqlConnect;
+import DataBase_patronAbstract.MySqlConnectionFactory;
 import database_queries.MySQLConnection;
 import javafx.scene.image.Image;
 import java.io.File;

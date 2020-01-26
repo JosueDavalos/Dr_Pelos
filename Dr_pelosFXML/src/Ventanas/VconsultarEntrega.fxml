@@ -85,14 +85,14 @@
                   <DatePicker fx:id="fecha_entrega" GridPane.columnIndex="3" />
                </children>
             </GridPane>
-            <TableView prefHeight="323.0" prefWidth="1000.0">
+            <TableView fx:id="table_consultar_paquete" prefHeight="323.0" prefWidth="1000.0">
               <columns>
                 <TableColumn prefWidth="75.0" text="Paquete" />
                   <TableColumn prefWidth="113.0" text="Cliente" />
                   <TableColumn prefWidth="90.0" text="Fecha Envio" />
                   <TableColumn prefWidth="109.66665649414062" text="Fecha Entrega" />
                   <TableColumn minWidth="0.0" prefWidth="488.3333435058594" text="Direccion de entrega" />
-                  <TableColumn prefWidth="123.66668701171875" text="Estado" />
+                  <TableColumn prefWidth="110.0" text="Estado" />
               </columns>
             </TableView>
          </children>

@@ -19,7 +19,7 @@ public class Usuario {
     private String direccion;
     private String telefono;
 
-    public Usuario(String cedula, String nombre, String apellido, String genero, String fechaNacimiento, String correo, String direccion, String telefono) {
+    public Usuario(String cedula, String nombre, String apellido, String genero, String correo, String fechaNacimiento, String direccion, String telefono) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;

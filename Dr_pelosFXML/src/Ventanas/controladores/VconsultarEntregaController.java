@@ -5,6 +5,7 @@
  */
 package Ventanas.controladores;
 
+import TDAs.Paquete;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -13,11 +14,19 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import usuario.Cliente;
 import static util.Componente.inicializarComboCategoriaPaquete;
 import static util.Componente.inicializarComboEstadoEntrega;
+import static util.Datos.atributosCliente;
+import static util.Datos.atributosPaquetes;
+import static util.QueryFachade.getClientesDB;
+import static util.QueryFachade.getPaquetesDB;
 import static util.Ventana.cambiarVentana;
 
 /**
@@ -41,6 +50,8 @@ public class VconsultarEntregaController implements Initializable {
     private DatePicker fecha_envio;
     @FXML
     private DatePicker fecha_entrega;
+    @FXML
+    private TableView<Paquete> table_consultar_paquete;
 
     /**
      * Initializes the controller class.
@@ -48,6 +59,14 @@ public class VconsultarEntregaController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         inicializarComboEstadoEntrega(estado_paquete);
+        String[] atributos = atributosPaquetes();
+        
+        int i =0;
+        for(TableColumn<Paquete,?> col: table_consultar_paquete.getColumns()){
+            col.setStyle( "-fx-alignment: CENTER;");
+            col.setCellValueFactory(new PropertyValueFactory<>(atributos[i++]));
+        }
+        table_consultar_paquete.getItems().addAll(getPaquetesDB());    
     }    
 
     @FXML

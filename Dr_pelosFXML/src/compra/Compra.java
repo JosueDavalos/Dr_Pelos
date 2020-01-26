@@ -6,7 +6,6 @@
 package compra;
 import java.time.LocalDate;
 import compra.IOferta;
-import comprobante.Comprobante;
 import java.util.ArrayList;
 import pago.IFormaPago;
 import usuario.Cliente;
@@ -18,7 +17,6 @@ public class Compra {
     private ArrayList<IOferta> iofertas;//
     private  LocalDate fechaCompra;
     private IFormaPago formaPago;
-    private  Comprobante comprobante;
     private Cliente cliente;
 
     public Compra(ArrayList<IOferta> iofertas, LocalDate fechaCompra, IFormaPago formaPago, Cliente cliente) {
@@ -28,14 +26,6 @@ public class Compra {
         this.cliente = cliente;
     }
 
-    public Comprobante getComprobante() {
-        return comprobante;
-    }
-
-    public void setComprobante(Comprobante comprobante) {
-        this.comprobante = comprobante;
-    }
-    
     
     public void agregarIOferta(IOferta ioferta){
         this.iofertas.add(ioferta);

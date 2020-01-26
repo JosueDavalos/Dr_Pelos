@@ -10,9 +10,11 @@ package usuario;
  * @author jeffer
  */
 public class JefeBodega extends Usuario{
-    
-    public JefeBodega(String cedula, String nombre, String apellido, String genero, String fechaNacimiento, String correo, String direccion, String telefono) {
-        super(cedula, nombre, apellido, genero, fechaNacimiento, correo, direccion, telefono);
+
+    public JefeBodega(String cedula, String nombre, String apellido, String genero, String correo, String fechaNacimiento, String direccion, String telefono) {
+        super(cedula, nombre, apellido, genero, correo, fechaNacimiento, direccion, telefono);
     }
+    
+   
     
 }

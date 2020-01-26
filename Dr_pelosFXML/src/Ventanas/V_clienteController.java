@@ -30,8 +30,8 @@ import static jdk.nashorn.internal.runtime.regexp.joni.constants.AsmConstants.S;
 import usuario.Cliente;
 import static util.Componente.inicializarComboGenero;
 import static util.Datos.atributosCliente;
-import static util.Datos.getClientes;
 import util.QueryFachade;
+import static util.QueryFachade.getClientesDB;
 import static util.Ventana.cambiarVentana;
 
 /**
@@ -70,7 +70,7 @@ public class V_clienteController implements Initializable {
             c.setCellValueFactory(new PropertyValueFactory<>(atributos[i++]));
             c.setCellFactory(TextFieldTableCell.forTableColumn());
         }
-        tabla_cliente.getItems().addAll(getClientes());          
+        tabla_cliente.getItems().addAll(getClientesDB());          
     }    
 
     @FXML

@@ -5,16 +5,34 @@
  */
 package DataBase_patronAbstract;
 
+import database_queries.MySQLConnection;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author jeffer
  */
-public class MySqlConnectionFactory implements IConnectionFactory {
-
+public class MySqlConnectionFactory implements IConnection{
+    private static MySQLConnection instance;
+    public static Connection connection;
+    private String url = "jdbc:mysql://192.168.100.46:3306/dr_pelos";
+    
     @Override
-    public IConnection getConnection() {
-        //PULLITA  hcer esto
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void connect(String username, String password) {
+        try {
+            this.connection = DriverManager.getConnection(url, username, password);
+        } catch (SQLException ex) {
+            Logger.getLogger(MySqlConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    @Override
+    public Connection getConnection(){
+        return MySqlConnectionFactory.connection;
     }
     
 }
