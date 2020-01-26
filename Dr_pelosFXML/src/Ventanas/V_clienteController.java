@@ -6,6 +6,7 @@
 package Ventanas;
 
 import static com.sun.javafx.css.SizeUnits.S;
+import database_queries.MySQLConnection;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -30,6 +31,7 @@ import usuario.Cliente;
 import static util.Componente.inicializarComboGenero;
 import static util.Datos.atributosCliente;
 import static util.Datos.getClientes;
+import util.QueryFachade;
 import static util.Ventana.cambiarVentana;
 
 /**
@@ -51,7 +53,6 @@ public class V_clienteController implements Initializable {
     @FXML private TextField apellido;
     
     @FXML private TableView<Cliente> tabla_cliente;
-
 
     /**
      * Initializes the controller class.
@@ -88,6 +89,11 @@ public class V_clienteController implements Initializable {
 
     @FXML
     private void accion_eliminar_cliente(MouseEvent event) {
+        Cliente clienteSelected = tabla_cliente.getSelectionModel().getSelectedItem();
+        System.out.println("Boton aplastado");
+        QueryFachade.makeQueryManipulate("DELETE FROM Cliente WHERE cedula='0931655365';");
+        
+        
     }
 
     @FXML

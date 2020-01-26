@@ -6,6 +6,9 @@
 package Ventanas.controladores;
 
 
+import DataBase_patronAbstract.IConnection;
+import DataBase_patronAbstract.MySqlConnect;
+import database_queries.MySQLConnection;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -38,7 +41,8 @@ public class LoginController implements Initializable {
     
     @FXML
     private void AccionIngresar(MouseEvent event) throws IOException {
-       cambiarVentana("/Ventanas/Vcajero.fxml",event, this);
+        MySQLConnection.start(user.getText(), password.getText());
+        cambiarVentana("/Ventanas/Vcajero.fxml",event, this);
     }
 
     @FXML

@@ -5,10 +5,13 @@
  */
 package DataBase_patronAbstract;
 
+import java.sql.Connection;
+
 /**
  *
  * @author jeffer
  */
 public interface IConnection {
-    public void connect();
+    public void connect(String username, String password);
+    public Connection getConnection();
 }

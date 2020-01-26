@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package databases;
+package DataBase_patronAbstract;
 
+import database_queries.MySQLConnection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -13,33 +14,25 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author JosueDavalos
+ * @author jeffer
  */
-public class MySQLConnection {
+public class MySqlConnect implements IConnection{
     private static MySQLConnection instance;
-    private Connection connection;
+    public static Connection connection;
     private String url = "jdbc:mysql://192.168.100.46:3306/dr_pelos";
-    private String username = "root";
-    private String password = "123";
     
-    private MySQLConnection(){
-        try{
+    @Override
+    public void connect(String username, String password) {
+        try {
             this.connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException ex) {
-            System.out.println("Conexion a base de datos fallida: " + ex.getMessage());
+            Logger.getLogger(MySqlConnect.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
-    public static MySQLConnection getInstance() throws SQLException{
-        if(instance == null){
-            instance = new MySQLConnection();
-        }else if (instance.getConnection().isClosed()) {
-            instance = new MySQLConnection();
-        }
-        return instance;
-    }
-    
+    @Override
     public Connection getConnection(){
-        return connection;
+        return MySqlConnect.connection;
     }
+    
 }

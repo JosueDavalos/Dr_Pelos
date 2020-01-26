@@ -5,6 +5,9 @@
  */
 package dr_pelosfxml;
 
+import DataBase_patronAbstract.IConnection;
+import DataBase_patronAbstract.MySqlConnect;
+import database_queries.MySQLConnection;
 import javafx.scene.image.Image;
 import java.io.File;
 import javafx.application.Application;
@@ -19,7 +22,8 @@ import javafx.stage.Stage;
  * @author JosueDavalos
  */
 public class Dr_pelosFXML extends Application {
-    
+    public static String username = "root";
+    public static String password = "123";
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
@@ -35,7 +39,7 @@ public class Dr_pelosFXML extends Application {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) {        
         launch(args);
     }
     

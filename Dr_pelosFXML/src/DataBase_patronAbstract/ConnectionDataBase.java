@@ -12,13 +12,13 @@ package DataBase_patronAbstract;
 public class ConnectionDataBase {
     private IConnectionFactory connectionFactory;
     
-    public void ConnectionDataBase(IConnectionFactory conecctionFactory){
+    public ConnectionDataBase(IConnectionFactory conecctionFactory){
          this.connectionFactory = conecctionFactory;
     }
     
-    public void start(DBType db_type){
+    public void start(DBType db_type, String username, String password){
         IConnection connection = connectionFactory.getConnection();
-        connection.connect();
+        connection.connect(username,password);
     }
 
     public IConnectionFactory getConnectionFactory() {
