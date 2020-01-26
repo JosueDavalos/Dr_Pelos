@@ -1,0 +1,6 @@
+projectKey=dr_pelos
+serverUrl=http://localhost:9000
+serverVersion=7.4.0.18908
+dashboardUrl=http://localhost:9000/dashboard?id=dr_pelos
+ceTaskId=AW_gJz38eVSgyOQrNy_X
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AW_gJz38eVSgyOQrNy_X
