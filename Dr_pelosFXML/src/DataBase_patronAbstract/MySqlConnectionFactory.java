@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 public class MySqlConnectionFactory implements IConnection{
     private static MySQLConnection instance;
     public static Connection connection;
-    private String url = "jdbc:mysql://192.168.100.46:3306/dr_pelos";
+    private String url = "jdbc:mysql://192.168.100.185:3306/dr_pelos";
     
     @Override
     public void connect(String username, String password) throws Exception{
