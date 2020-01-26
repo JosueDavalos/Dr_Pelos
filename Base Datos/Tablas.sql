@@ -124,6 +124,21 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `dr_pelos`.`Paquete`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS dr_pelos.Paquete (
+  ID INT NOT NULL AUTO_INCREMENT,
+  cliente INT NOT NULL,
+  fechaEnvio DATE NOT NULL,
+  fechaEntrega DATE NOT NULL,
+  direccion varchar(100) NOT NULL,
+  estado varchar(20) not Null default "Pendiente",
+  PRIMARY KEY (ID),
+  foreign key (cliente) references dr_pelos.Cliente (ID))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `dr_pelos`.`DocumentoEntrega`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS dr_pelos.DocumentoEntrega (
@@ -131,8 +146,10 @@ CREATE TABLE IF NOT EXISTS dr_pelos.DocumentoEntrega (
   descripcion VARCHAR(50) NOT NULL,
   repartidor INT NOT NULL,
   jefeBodega INT NOT NULL,
+  paquete INT NOT NULL,
   PRIMARY KEY (ID),
   foreign key (repartidor) references dr_pelos.Repartidor (ID),
+  foreign key (paquete) references dr_pelos.paquete (ID),
   foreign key (jefeBodega) references dr_pelos.JefeBodega (ID))
 ENGINE = InnoDB;
 
@@ -176,5 +193,43 @@ CREATE TABLE IF NOT EXISTS dr_pelos.Pago (
   foreign key (detallePago) references dr_pelos.DetallePago (ID))
 ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `dr_pelos`.`infoPaquete`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS dr_pelos.infoPaquete (
+  paquete INT NOT NULL,
+  producto int not null,
+  PRIMARY KEY (paquete, producto),
+  foreign key (paquete) references dr_pelos.paquete (ID),
+  foreign key (producto) references dr_pelos.producto (ID))
+ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `dr_pelos`.`Mascota`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS dr_pelos.Mascota (
+  ID INT NOT NULL AUTO_INCREMENT,
+  dueño INT NOT NULL,
+  nombre varchar(50) not null,
+  tipo varchar(50) NOT NULL,
+  fechaNacimiento Date not null,
+  PRIMARY KEY (ID),
+  foreign key (dueño) references dr_pelos.cliente (ID))
+ENGINE = InnoDB;
+
+-- -----------------------------------------------------
+-- Table `dr_pelos`.`TranasladoMascota`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS dr_pelos.TranasladoMascota (
+  ID INT NOT NULL AUTO_INCREMENT,
+  dueño INT NOT NULL,
+  mascota int NOT NULL,
+  fechaEnvio DATE NOT NULL,
+  fechaEntrega DATE NOT NULL,
+  estado varchar(20) default "Pendiente",
+  direccion varchar(75) not null,
+  PRIMARY KEY (ID),
+  foreign key (dueño) references dr_pelos.cliente (ID),
+  foreign key (mascota) references dr_pelos.mascota (ID))
+ENGINE = InnoDB;
 

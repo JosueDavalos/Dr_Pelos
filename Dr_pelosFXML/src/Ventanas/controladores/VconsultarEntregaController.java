@@ -12,9 +12,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.DatePicker;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import usuarios.Cliente;
 import static util.Componente.inicializarComboCategoriaPaquete;
 import static util.Componente.inicializarComboEstadoEntrega;
 import static util.Ventana.cambiarVentana;
@@ -33,13 +34,13 @@ public class VconsultarEntregaController implements Initializable {
     @FXML
     private Button boton_buscar;
     @FXML
-    private TextField nombre_paquete;
-    @FXML
-    private TextField descripcion_paquete;
-    @FXML
     private ComboBox<String> estado_paquete;
     @FXML
-    private ComboBox<String> categoria_paquete;
+    private ComboBox<Cliente> cliente;
+    @FXML
+    private DatePicker fecha_envio;
+    @FXML
+    private DatePicker fecha_entrega;
 
     /**
      * Initializes the controller class.
@@ -47,7 +48,6 @@ public class VconsultarEntregaController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         inicializarComboEstadoEntrega(estado_paquete);
-        inicializarComboCategoriaPaquete(categoria_paquete);
     }    
 
     @FXML
