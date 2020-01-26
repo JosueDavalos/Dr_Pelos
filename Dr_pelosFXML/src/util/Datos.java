@@ -6,7 +6,7 @@
 package util;
 
 import java.util.ArrayList;
-import usuarios.Cliente;
+import usuario.Cliente;
 
 /**
  *
@@ -18,7 +18,6 @@ public class Datos {
         String[] atributos = {"cedula","nombre","apellido","fechaNacimiento","genero","correo","direccion","telefono"};
         return atributos;
     }
-    
     public static ArrayList<Cliente> getClientes(){
         Cliente c1 = new Cliente("0931657365","Bryan","Sanchez","M","1999-12-18","brymsanc@espol.edu.ec","Acuarela del rio Mz 2 V1","0989195454");
         Cliente c2 = new Cliente("7894561230","Mois","Cabezas","M","1999-12-25","bmsa@espol.edu.ec","Sauces","0989845621");
