@@ -179,40 +179,18 @@ insert into infoPaquete(paquete,producto) values (14,4);
 insert into infoPaquete(paquete,producto) values (12,5);
 
 
-insert into Mascota(dueño,nombre,tipo,fechaNacimiento) 
+insert into Mascota(dueno,nombre,tipo,fechaNacimiento) 
 	values (1,"Firulais","Canino","2018-12-07"), 
 			(2,"Chakira","Canino","2018-11-28"),
             (3,"Ebola","Felino","2018-02-28"),
             (4,"Mini","Felino","2017-12-18");
             
-insert into Mascota(dueño,nombre,tipo,fechaNacimiento) values (5,"Luka","Felino","2018-12-11");
-insert into Mascota(dueño,nombre,tipo,fechaNacimiento) values (6,"Nina","Felino","2018-02-07");
-insert into Mascota(dueño,nombre,tipo,fechaNacimiento) values (7,"Rodolfo","Canino","2018-01-07");
-insert into Mascota(dueño,nombre,tipo,fechaNacimiento) values (8,"Perro","Canino","2018-05-07");
-insert into Mascota(dueño,nombre,tipo,fechaNacimiento) values (9,"Pitbull","Felino","2018-06-07");
-insert into Mascota(dueño,nombre,tipo,fechaNacimiento) values (1,"Bethoven","Felino","2018-02-11");
-insert into Mascota(dueño,nombre,tipo,fechaNacimiento) values (2,"Morza","Canino","2018-08-11");
-insert into Mascota(dueño,nombre,tipo,fechaNacimiento) values (5,"Bender","Canino","2018-05-07");
-insert into Mascota(dueño,nombre,tipo,fechaNacimiento) values (7,"Bony","Felino","2018-12-07");
-insert into Mascota(dueño,nombre,tipo,fechaNacimiento) values (8,"Bob","Felino","2018-02-07");
-insert into Mascota(dueño,nombre,tipo,fechaNacimiento) values (4,"Bagatele","Canino","2018-12-11");
-insert into Mascota(dueño,nombre,tipo,fechaNacimiento) values (2,"Beatle","Canino","2018-12-02");
 
-insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (1,1,"2020-01-25","2020-01-26","Pendiente","Acuarela del rio Mz2 V1");
-insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (2,2,"2020-01-24","2020-01-26","Pendiente","Colina de los Ceibos Mz 34");
-insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (3,3,"2020-01-23","2020-01-27","Entregado","Sauces 7 Mz 4");
-insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (4,4,"2020-01-22","2020-01-28","Entregado","Alban Borja");
-insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (5,5,"2020-01-24","2020-01-27","Entregado","Ceibos Norte Mz 40");
-insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (6,6,"2020-01-22","2020-01-26","Pendiente","Guayacanes");
-insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (7,7,"2020-01-22","2020-01-26","Pendiente","Colina de los Ceibos Mz 34");
-insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (8,8,"2020-01-21","2020-01-27","Entregado","Alban Borja");
-insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (9,9,"2020-01-20","2020-01-26","Entregado","Acuarela del rio Mz33 V1");
-insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (1,10,"2020-01-20","2020-01-27","Pendiente","Colina de los Ceibos Mz 34");
-insert into TrasladoMascota(dueño,mascota,fechaEnvio,fechaEntrega,estado,direccion) values (2,11,"2020-01-20","2020-01-28","Pendiente","Acuarela del rio Mz25 V1");
 
 
 #select p.ID, c.nombre, c.apellido, p.fechaEnvio, p.fechaEntrega, p.direccion, p.estado from Paquete p
 #join Cliente c where c.ID= p.cliente;
 
 select * from Servicio;
+
 

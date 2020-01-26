@@ -214,12 +214,12 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS dr_pelos.Mascota (
   ID INT NOT NULL AUTO_INCREMENT,
-  dueño INT NOT NULL,
+  dueno INT NOT NULL,
   nombre varchar(50) not null,
   tipo enum("Canino","Felino"),
   fechaNacimiento Date not null,
   PRIMARY KEY (ID),
-  foreign key (dueño) references dr_pelos.Cliente (ID))
+  foreign key (dueno) references dr_pelos.Cliente (ID))
 ENGINE = InnoDB;
 
 -- -----------------------------------------------------
@@ -227,14 +227,14 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS dr_pelos.TrasladoMascota (
   ID INT NOT NULL AUTO_INCREMENT,
-  dueño INT NOT NULL,
+  dueno INT NOT NULL,
   mascota int NOT NULL,
   fechaEnvio DATE NOT NULL,
   fechaEntrega DATE NOT NULL,
   estado enum("Pendiente","Entregado") default "Pendiente",
   direccion varchar(75) not null,
   PRIMARY KEY (ID),
-  foreign key (dueño) references dr_pelos.Cliente (ID),
+  foreign key (dueno) references dr_pelos.Cliente (ID),
   foreign key (mascota) references dr_pelos.Mascota (ID))
 ENGINE = InnoDB;
 
